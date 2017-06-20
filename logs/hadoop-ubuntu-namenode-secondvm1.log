@@ -1,0 +1,140 @@
+2017-06-20 00:02:42,559 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Roll Edit Log from 192.168.1.155
+2017-06-20 00:02:42,560 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 0 SyncTimes(ms): 0 
+2017-06-20 00:02:42,561 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits
+2017-06-20 00:02:42,561 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits
+2017-06-20 00:02:42,706 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50090/getimage?getimage=1
+2017-06-20 00:02:42,715 INFO org.apache.hadoop.hdfs.server.namenode.GetImageServlet: Downloaded new fsimage with checksum: aafb6c9c8e81e920f345971a7eaefba2
+2017-06-20 00:02:42,716 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Roll FSImage from 192.168.1.155
+2017-06-20 00:02:42,717 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 1 SyncTimes(ms): 10 
+2017-06-20 00:02:42,718 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits.new
+2017-06-20 00:02:42,719 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits.new
+2017-06-20 00:09:21,821 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.157:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 00:50:05,548 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.159:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 00:51:09,744 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.156:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 00:52:10,989 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.158:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 01:02:42,810 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Roll Edit Log from 192.168.1.155
+2017-06-20 01:02:42,811 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 0 SyncTimes(ms): 0 
+2017-06-20 01:02:42,812 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits
+2017-06-20 01:02:42,812 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits
+2017-06-20 01:02:42,901 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50090/getimage?getimage=1
+2017-06-20 01:02:42,906 INFO org.apache.hadoop.hdfs.server.namenode.GetImageServlet: Downloaded new fsimage with checksum: b3a7fee43a22c52a9401e45623b8c731
+2017-06-20 01:02:42,907 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Roll FSImage from 192.168.1.155
+2017-06-20 01:02:42,907 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 1 SyncTimes(ms): 23 
+2017-06-20 01:02:42,909 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits.new
+2017-06-20 01:02:42,909 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits.new
+2017-06-20 01:09:20,125 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.157:50010, blocks: 25, processing time: 1 msecs
+2017-06-20 01:50:05,646 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.159:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 01:51:08,977 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.156:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 01:52:09,271 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.158:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 02:02:43,003 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Roll Edit Log from 192.168.1.155
+2017-06-20 02:02:43,004 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 0 SyncTimes(ms): 0 
+2017-06-20 02:02:43,005 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits
+2017-06-20 02:02:43,005 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits
+2017-06-20 02:02:43,097 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50090/getimage?getimage=1
+2017-06-20 02:02:43,102 INFO org.apache.hadoop.hdfs.server.namenode.GetImageServlet: Downloaded new fsimage with checksum: dec1edeeffae928b193c5fc27d948483
+2017-06-20 02:02:43,103 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Roll FSImage from 192.168.1.155
+2017-06-20 02:02:43,104 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 1 SyncTimes(ms): 21 
+2017-06-20 02:02:43,105 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits.new
+2017-06-20 02:02:43,106 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits.new
+2017-06-20 02:09:21,440 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.157:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 02:50:05,541 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.159:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 02:51:09,569 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.156:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 02:52:07,562 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.158:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 03:02:43,214 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Roll Edit Log from 192.168.1.155
+2017-06-20 03:02:43,215 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 0 SyncTimes(ms): 0 
+2017-06-20 03:02:43,216 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits
+2017-06-20 03:02:43,216 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits
+2017-06-20 03:02:43,288 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50090/getimage?getimage=1
+2017-06-20 03:02:43,293 INFO org.apache.hadoop.hdfs.server.namenode.GetImageServlet: Downloaded new fsimage with checksum: 1432d3998ed41502111b58233727486f
+2017-06-20 03:02:43,294 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Roll FSImage from 192.168.1.155
+2017-06-20 03:02:43,294 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 1 SyncTimes(ms): 9 
+2017-06-20 03:02:43,296 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits.new
+2017-06-20 03:02:43,296 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits.new
+2017-06-20 03:09:16,721 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.157:50010, blocks: 25, processing time: 1 msecs
+2017-06-20 03:50:05,725 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.159:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 03:51:09,471 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.156:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 03:52:05,847 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.158:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 04:02:43,379 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Roll Edit Log from 192.168.1.155
+2017-06-20 04:02:43,379 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 0 SyncTimes(ms): 0 
+2017-06-20 04:02:43,380 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits
+2017-06-20 04:02:43,380 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits
+2017-06-20 04:02:43,476 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50090/getimage?getimage=1
+2017-06-20 04:02:43,481 INFO org.apache.hadoop.hdfs.server.namenode.GetImageServlet: Downloaded new fsimage with checksum: 1432d3998ed41502111b58233727486f
+2017-06-20 04:02:43,482 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Roll FSImage from 192.168.1.155
+2017-06-20 04:02:43,482 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 1 SyncTimes(ms): 10 
+2017-06-20 04:02:43,483 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits.new
+2017-06-20 04:02:43,484 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits.new
+2017-06-20 04:09:21,001 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.157:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 04:50:04,793 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.159:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 04:51:05,979 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.156:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 04:52:10,180 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.158:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 05:02:43,566 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Roll Edit Log from 192.168.1.155
+2017-06-20 05:02:43,567 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 0 SyncTimes(ms): 0 
+2017-06-20 05:02:43,568 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits
+2017-06-20 05:02:43,568 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits
+2017-06-20 05:02:43,646 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50090/getimage?getimage=1
+2017-06-20 05:02:43,651 INFO org.apache.hadoop.hdfs.server.namenode.GetImageServlet: Downloaded new fsimage with checksum: 1432d3998ed41502111b58233727486f
+2017-06-20 05:02:43,652 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Roll FSImage from 192.168.1.155
+2017-06-20 05:02:43,652 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 1 SyncTimes(ms): 12 
+2017-06-20 05:02:43,654 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits.new
+2017-06-20 05:02:43,655 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits.new
+2017-06-20 05:09:19,319 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.157:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 05:50:04,405 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.159:50010, blocks: 25, processing time: 1 msecs
+2017-06-20 05:51:11,347 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.156:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 05:52:05,486 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.158:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 06:02:43,745 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Roll Edit Log from 192.168.1.155
+2017-06-20 06:02:43,746 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 0 SyncTimes(ms): 0 
+2017-06-20 06:02:43,747 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits
+2017-06-20 06:02:43,747 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits
+2017-06-20 06:02:43,864 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50090/getimage?getimage=1
+2017-06-20 06:02:43,869 INFO org.apache.hadoop.hdfs.server.namenode.GetImageServlet: Downloaded new fsimage with checksum: 1432d3998ed41502111b58233727486f
+2017-06-20 06:02:43,870 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Roll FSImage from 192.168.1.155
+2017-06-20 06:02:43,870 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 1 SyncTimes(ms): 34 
+2017-06-20 06:02:43,872 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits.new
+2017-06-20 06:02:43,872 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits.new
+2017-06-20 06:09:20,605 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.157:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 06:50:04,675 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.159:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 06:51:10,971 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.156:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 06:52:06,774 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.158:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 07:02:43,963 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Roll Edit Log from 192.168.1.155
+2017-06-20 07:02:43,963 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 0 SyncTimes(ms): 0 
+2017-06-20 07:02:43,964 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits
+2017-06-20 07:02:43,964 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits
+2017-06-20 07:02:44,031 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50090/getimage?getimage=1
+2017-06-20 07:02:44,036 INFO org.apache.hadoop.hdfs.server.namenode.GetImageServlet: Downloaded new fsimage with checksum: 1432d3998ed41502111b58233727486f
+2017-06-20 07:02:44,037 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Roll FSImage from 192.168.1.155
+2017-06-20 07:02:44,037 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 1 SyncTimes(ms): 12 
+2017-06-20 07:02:44,038 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits.new
+2017-06-20 07:02:44,039 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits.new
+2017-06-20 07:09:21,943 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.157:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 07:50:07,224 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.159:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 07:51:10,212 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.156:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 07:52:05,083 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.158:50010, blocks: 25, processing time: 1 msecs
+2017-06-20 08:02:44,129 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Roll Edit Log from 192.168.1.155
+2017-06-20 08:02:44,129 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 0 SyncTimes(ms): 0 
+2017-06-20 08:02:44,130 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits
+2017-06-20 08:02:44,131 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits
+2017-06-20 08:02:44,230 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50090/getimage?getimage=1
+2017-06-20 08:02:44,235 INFO org.apache.hadoop.hdfs.server.namenode.GetImageServlet: Downloaded new fsimage with checksum: 1432d3998ed41502111b58233727486f
+2017-06-20 08:02:44,236 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Roll FSImage from 192.168.1.155
+2017-06-20 08:02:44,236 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 1 SyncTimes(ms): 13 
+2017-06-20 08:02:44,237 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits.new
+2017-06-20 08:02:44,238 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits.new
+2017-06-20 08:09:17,218 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.157:50010, blocks: 25, processing time: 1 msecs
+2017-06-20 08:50:06,840 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.159:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 08:51:06,832 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.156:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 08:52:06,349 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.158:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 09:02:44,325 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Roll Edit Log from 192.168.1.155
+2017-06-20 09:02:44,325 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 0 SyncTimes(ms): 0 
+2017-06-20 09:02:44,326 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits
+2017-06-20 09:02:44,327 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits
+2017-06-20 09:02:44,434 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50090/getimage?getimage=1
+2017-06-20 09:02:44,439 INFO org.apache.hadoop.hdfs.server.namenode.GetImageServlet: Downloaded new fsimage with checksum: 1432d3998ed41502111b58233727486f
+2017-06-20 09:02:44,440 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Roll FSImage from 192.168.1.155
+2017-06-20 09:02:44,440 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 1 SyncTimes(ms): 48 
+2017-06-20 09:02:44,441 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits.new
+2017-06-20 09:02:44,442 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits.new
+2017-06-20 09:09:18,486 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.157:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 09:50:06,000 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.159:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 09:51:09,398 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.156:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 09:52:10,667 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.158:50010, blocks: 25, processing time: 0 msecs
