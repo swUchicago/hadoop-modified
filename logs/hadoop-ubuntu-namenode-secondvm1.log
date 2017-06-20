@@ -138,3 +138,51 @@
 2017-06-20 09:50:06,000 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.159:50010, blocks: 25, processing time: 0 msecs
 2017-06-20 09:51:09,398 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.156:50010, blocks: 25, processing time: 0 msecs
 2017-06-20 09:52:10,667 INFO org.apache.hadoop.hdfs.StateChange: *BLOCK* processReport: from 192.168.1.158:50010, blocks: 25, processing time: 0 msecs
+2017-06-20 10:02:44,537 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Roll Edit Log from 192.168.1.155
+2017-06-20 10:02:44,537 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 0 SyncTimes(ms): 0 
+2017-06-20 10:02:44,538 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits
+2017-06-20 10:02:44,539 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 0, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits
+2017-06-20 10:02:44,540 ERROR org.apache.hadoop.hdfs.server.namenode.FSEditLog: error retrying to reopen storage directory '/home/ubuntu/hadoop-release-1.2.0/temp/dfs/name'
+java.io.FileNotFoundException: /home/ubuntu/hadoop-release-1.2.0/temp/dfs/name/current/edits.new (No such file or directory)
+	at java.io.RandomAccessFile.open(Native Method)
+	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:233)
+	at org.apache.hadoop.hdfs.server.namenode.FSEditLog$EditLogFileOutputStream.<init>(FSEditLog.java:162)
+	at org.apache.hadoop.hdfs.server.namenode.FSEditLog.rollEditLog(FSEditLog.java:1505)
+	at org.apache.hadoop.hdfs.server.namenode.FSImage.rollEditLog(FSImage.java:1614)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.rollEditLog(FSNamesystem.java:5645)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode.rollEditLog(NameNode.java:1002)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:587)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:1432)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:1428)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1190)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:1426)
+2017-06-20 10:02:44,543 FATAL org.apache.hadoop.hdfs.server.namenode.FSEditLog: No edit streams are accessible
+java.lang.Exception: No edit streams are accessible
+	at org.apache.hadoop.hdfs.server.namenode.FSEditLog.fatalExit(FSEditLog.java:427)
+	at org.apache.hadoop.hdfs.server.namenode.FSEditLog.exitIfNoStreams(FSEditLog.java:446)
+	at org.apache.hadoop.hdfs.server.namenode.FSEditLog.removeEditsForStorageDir(FSEditLog.java:492)
+	at org.apache.hadoop.hdfs.server.namenode.FSEditLog.rollEditLog(FSEditLog.java:1520)
+	at org.apache.hadoop.hdfs.server.namenode.FSImage.rollEditLog(FSImage.java:1614)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.rollEditLog(FSNamesystem.java:5645)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode.rollEditLog(NameNode.java:1002)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:587)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:1432)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:1428)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1190)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:1426)
+2017-06-20 10:02:44,545 INFO org.apache.hadoop.hdfs.server.namenode.NameNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down NameNode at secondvm1/192.168.1.155
+************************************************************/

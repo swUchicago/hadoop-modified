@@ -318,3 +318,53 @@
 2017-06-20 09:02:44,431 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Posted URL 0.0.0.0:50070putimage=1&port=50090&machine=0.0.0.0&token=-41:1578052065:0:1497942164000:1497938564238&newChecksum=1432d3998ed41502111b58233727486f
 2017-06-20 09:02:44,431 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50070/getimage?putimage=1&port=50090&machine=0.0.0.0&token=-41:1578052065:0:1497942164000:1497938564238&newChecksum=1432d3998ed41502111b58233727486f
 2017-06-20 09:02:44,470 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Checkpoint done. New Image Size: 1947
+2017-06-20 10:02:44,520 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 0 SyncTimes(ms): 0 
+2017-06-20 10:02:44,521 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/namesecondary/current/edits
+2017-06-20 10:02:44,521 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 0, editlog=/home/ubuntu/hadoop-release-1.2.0/temp/dfs/namesecondary/current/edits
+2017-06-20 10:02:44,884 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint: 
+2017-06-20 10:02:44,887 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: java.io.IOException: Call to secondvm1/192.168.1.155:6000 failed on local exception: java.io.EOFException
+	at org.apache.hadoop.ipc.Client.wrapException(Client.java:1144)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1112)
+	at org.apache.hadoop.ipc.RPC$Invoker.invoke(RPC.java:229)
+	at com.sun.proxy.$Proxy5.rollEditLog(Unknown Source)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:512)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:396)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:360)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.hadoop.ipc.Client$Connection.receiveResponse(Client.java:841)
+	at org.apache.hadoop.ipc.Client$Connection.run(Client.java:786)
+
+2017-06-20 10:07:45,889 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 0 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:07:46,890 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 1 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:07:47,891 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 2 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:07:48,892 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 3 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:07:49,893 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 4 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:07:50,894 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 5 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:07:51,895 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 6 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:07:52,895 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 7 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:07:53,897 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 8 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:07:54,898 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 9 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:07:54,899 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint: 
+2017-06-20 10:07:54,900 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: java.net.ConnectException: Call to secondvm1/192.168.1.155:6000 failed on connection exception: java.net.ConnectException: Connection refused
+	at org.apache.hadoop.ipc.Client.wrapException(Client.java:1136)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1112)
+	at org.apache.hadoop.ipc.RPC$Invoker.invoke(RPC.java:229)
+	at com.sun.proxy.$Proxy5.getEditLogSize(Unknown Source)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:393)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:360)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:692)
+	at org.apache.hadoop.net.SocketIOWithTimeout.connect(SocketIOWithTimeout.java:206)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:511)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:481)
+	at org.apache.hadoop.ipc.Client$Connection.setupConnection(Client.java:453)
+	at org.apache.hadoop.ipc.Client$Connection.setupIOstreams(Client.java:579)
+	at org.apache.hadoop.ipc.Client$Connection.access$2100(Client.java:202)
+	at org.apache.hadoop.ipc.Client.getConnection(Client.java:1243)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1087)
+	... 5 more
+
