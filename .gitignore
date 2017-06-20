@@ -2,3 +2,4 @@ temp/
 temp/dfs/
 logs/
 conf/
+*.class

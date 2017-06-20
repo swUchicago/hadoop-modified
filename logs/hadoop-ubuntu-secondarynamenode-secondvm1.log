@@ -464,3 +464,615 @@ Caused by: java.net.ConnectException: Connection refused
 	at org.apache.hadoop.ipc.Client.call(Client.java:1087)
 	... 5 more
 
+2017-06-20 10:28:25,943 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 0 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:28:26,944 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 1 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:28:27,945 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 2 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:28:28,946 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 3 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:28:29,947 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 4 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:28:30,948 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 5 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:28:31,949 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 6 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:28:32,950 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 7 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:28:33,951 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 8 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:28:34,952 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 9 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:28:34,952 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint: 
+2017-06-20 10:28:34,953 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: java.net.ConnectException: Call to secondvm1/192.168.1.155:6000 failed on connection exception: java.net.ConnectException: Connection refused
+	at org.apache.hadoop.ipc.Client.wrapException(Client.java:1136)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1112)
+	at org.apache.hadoop.ipc.RPC$Invoker.invoke(RPC.java:229)
+	at com.sun.proxy.$Proxy5.getEditLogSize(Unknown Source)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:393)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:360)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:692)
+	at org.apache.hadoop.net.SocketIOWithTimeout.connect(SocketIOWithTimeout.java:206)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:511)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:481)
+	at org.apache.hadoop.ipc.Client$Connection.setupConnection(Client.java:453)
+	at org.apache.hadoop.ipc.Client$Connection.setupIOstreams(Client.java:579)
+	at org.apache.hadoop.ipc.Client$Connection.access$2100(Client.java:202)
+	at org.apache.hadoop.ipc.Client.getConnection(Client.java:1243)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1087)
+	... 5 more
+
+2017-06-20 10:33:35,960 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 0 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:33:36,961 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 1 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:33:37,962 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 2 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:33:38,962 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 3 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:33:39,963 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 4 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:33:40,964 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 5 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:33:41,965 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 6 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:33:42,966 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 7 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:33:43,967 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 8 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:33:44,968 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 9 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:33:44,968 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint: 
+2017-06-20 10:33:44,969 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: java.net.ConnectException: Call to secondvm1/192.168.1.155:6000 failed on connection exception: java.net.ConnectException: Connection refused
+	at org.apache.hadoop.ipc.Client.wrapException(Client.java:1136)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1112)
+	at org.apache.hadoop.ipc.RPC$Invoker.invoke(RPC.java:229)
+	at com.sun.proxy.$Proxy5.getEditLogSize(Unknown Source)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:393)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:360)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:692)
+	at org.apache.hadoop.net.SocketIOWithTimeout.connect(SocketIOWithTimeout.java:206)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:511)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:481)
+	at org.apache.hadoop.ipc.Client$Connection.setupConnection(Client.java:453)
+	at org.apache.hadoop.ipc.Client$Connection.setupIOstreams(Client.java:579)
+	at org.apache.hadoop.ipc.Client$Connection.access$2100(Client.java:202)
+	at org.apache.hadoop.ipc.Client.getConnection(Client.java:1243)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1087)
+	... 5 more
+
+2017-06-20 10:38:45,972 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 0 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:38:46,973 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 1 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:38:47,978 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 2 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:38:48,979 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 3 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:38:49,980 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 4 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:38:50,981 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 5 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:38:51,983 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 6 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:38:52,983 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 7 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:38:53,984 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 8 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:38:54,988 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 9 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:38:54,989 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint: 
+2017-06-20 10:38:54,990 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: java.net.ConnectException: Call to secondvm1/192.168.1.155:6000 failed on connection exception: java.net.ConnectException: Connection refused
+	at org.apache.hadoop.ipc.Client.wrapException(Client.java:1136)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1112)
+	at org.apache.hadoop.ipc.RPC$Invoker.invoke(RPC.java:229)
+	at com.sun.proxy.$Proxy5.getEditLogSize(Unknown Source)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:393)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:360)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:692)
+	at org.apache.hadoop.net.SocketIOWithTimeout.connect(SocketIOWithTimeout.java:206)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:511)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:481)
+	at org.apache.hadoop.ipc.Client$Connection.setupConnection(Client.java:453)
+	at org.apache.hadoop.ipc.Client$Connection.setupIOstreams(Client.java:579)
+	at org.apache.hadoop.ipc.Client$Connection.access$2100(Client.java:202)
+	at org.apache.hadoop.ipc.Client.getConnection(Client.java:1243)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1087)
+	... 5 more
+
+2017-06-20 10:43:55,992 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 0 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:43:56,993 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 1 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:43:57,994 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 2 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:43:58,999 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 3 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:44:00,000 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 4 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:44:01,001 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 5 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:44:02,002 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 6 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:44:03,003 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 7 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:44:04,005 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 8 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:44:05,006 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 9 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:44:05,007 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint: 
+2017-06-20 10:44:05,007 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: java.net.ConnectException: Call to secondvm1/192.168.1.155:6000 failed on connection exception: java.net.ConnectException: Connection refused
+	at org.apache.hadoop.ipc.Client.wrapException(Client.java:1136)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1112)
+	at org.apache.hadoop.ipc.RPC$Invoker.invoke(RPC.java:229)
+	at com.sun.proxy.$Proxy5.getEditLogSize(Unknown Source)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:393)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:360)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:692)
+	at org.apache.hadoop.net.SocketIOWithTimeout.connect(SocketIOWithTimeout.java:206)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:511)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:481)
+	at org.apache.hadoop.ipc.Client$Connection.setupConnection(Client.java:453)
+	at org.apache.hadoop.ipc.Client$Connection.setupIOstreams(Client.java:579)
+	at org.apache.hadoop.ipc.Client$Connection.access$2100(Client.java:202)
+	at org.apache.hadoop.ipc.Client.getConnection(Client.java:1243)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1087)
+	... 5 more
+
+2017-06-20 10:49:06,010 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 0 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:49:07,011 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 1 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:49:08,011 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 2 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:49:09,012 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 3 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:49:10,013 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 4 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:49:11,014 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 5 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:49:12,015 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 6 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:49:13,016 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 7 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:49:14,017 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 8 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:49:15,018 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 9 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:49:15,019 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint: 
+2017-06-20 10:49:15,019 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: java.net.ConnectException: Call to secondvm1/192.168.1.155:6000 failed on connection exception: java.net.ConnectException: Connection refused
+	at org.apache.hadoop.ipc.Client.wrapException(Client.java:1136)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1112)
+	at org.apache.hadoop.ipc.RPC$Invoker.invoke(RPC.java:229)
+	at com.sun.proxy.$Proxy5.getEditLogSize(Unknown Source)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:393)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:360)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:692)
+	at org.apache.hadoop.net.SocketIOWithTimeout.connect(SocketIOWithTimeout.java:206)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:511)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:481)
+	at org.apache.hadoop.ipc.Client$Connection.setupConnection(Client.java:453)
+	at org.apache.hadoop.ipc.Client$Connection.setupIOstreams(Client.java:579)
+	at org.apache.hadoop.ipc.Client$Connection.access$2100(Client.java:202)
+	at org.apache.hadoop.ipc.Client.getConnection(Client.java:1243)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1087)
+	... 5 more
+
+2017-06-20 10:54:16,023 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 0 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:54:17,024 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 1 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:54:18,025 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 2 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:54:19,029 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 3 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:54:20,030 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 4 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:54:21,031 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 5 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:54:22,032 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 6 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:54:23,033 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 7 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:54:24,035 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 8 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:54:25,039 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 9 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:54:25,040 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Exception in doCheckpoint: 
+2017-06-20 10:54:25,042 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: java.net.ConnectException: Call to secondvm1/192.168.1.155:6000 failed on connection exception: java.net.ConnectException: Connection refused
+	at org.apache.hadoop.ipc.Client.wrapException(Client.java:1136)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1112)
+	at org.apache.hadoop.ipc.RPC$Invoker.invoke(RPC.java:229)
+	at com.sun.proxy.$Proxy5.getEditLogSize(Unknown Source)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:393)
+	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:360)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:692)
+	at org.apache.hadoop.net.SocketIOWithTimeout.connect(SocketIOWithTimeout.java:206)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:511)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:481)
+	at org.apache.hadoop.ipc.Client$Connection.setupConnection(Client.java:453)
+	at org.apache.hadoop.ipc.Client$Connection.setupIOstreams(Client.java:579)
+	at org.apache.hadoop.ipc.Client$Connection.access$2100(Client.java:202)
+	at org.apache.hadoop.ipc.Client.getConnection(Client.java:1243)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1087)
+	... 5 more
+
+2017-06-20 10:59:26,044 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 0 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:59:27,045 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 1 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:59:28,046 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 2 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:59:29,048 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 3 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:59:30,049 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 4 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 10:59:30,105 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down SecondaryNameNode at secondvm1/192.168.1.155
+************************************************************/
+2017-06-20 11:17:54,351 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting SecondaryNameNode
+STARTUP_MSG:   host = secondvm1/192.168.1.155
+STARTUP_MSG:   args = []
+STARTUP_MSG:   version = 1.2.1-SNAPSHOT
+STARTUP_MSG:   build = git://secondvm1/ on branch master -r 056933d6118a1e771593c941d64801f59c2a50e9; compiled by 'ubuntu' on Tue Jun 20 11:09:31 CEST 2017
+STARTUP_MSG:   java = 1.7.0_21
+************************************************************/
+2017-06-20 11:17:54,453 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: dfs.namenode.edits.toleration.length is set to 0.  Override it with -1, i.e. disable it.
+2017-06-20 11:17:54,818 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down SecondaryNameNode at secondvm1/192.168.1.155
+************************************************************/
+2017-06-20 11:20:53,638 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting SecondaryNameNode
+STARTUP_MSG:   host = secondvm1/192.168.1.155
+STARTUP_MSG:   args = []
+STARTUP_MSG:   version = 1.2.1-SNAPSHOT
+STARTUP_MSG:   build = git://secondvm1/ on branch master -r 056933d6118a1e771593c941d64801f59c2a50e9; compiled by 'ubuntu' on Tue Jun 20 11:09:31 CEST 2017
+STARTUP_MSG:   java = 1.7.0_21
+************************************************************/
+2017-06-20 11:20:53,715 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: dfs.namenode.edits.toleration.length is set to 0.  Override it with -1, i.e. disable it.
+2017-06-20 11:20:54,052 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down SecondaryNameNode at secondvm1/192.168.1.155
+************************************************************/
+2017-06-20 11:22:25,987 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting SecondaryNameNode
+STARTUP_MSG:   host = secondvm1/192.168.1.155
+STARTUP_MSG:   args = []
+STARTUP_MSG:   version = 1.2.1-SNAPSHOT
+STARTUP_MSG:   build = git://secondvm1/ on branch master -r 056933d6118a1e771593c941d64801f59c2a50e9; compiled by 'ubuntu' on Tue Jun 20 11:09:31 CEST 2017
+STARTUP_MSG:   java = 1.7.0_21
+************************************************************/
+2017-06-20 11:22:26,083 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: dfs.namenode.edits.toleration.length is set to 0.  Override it with -1, i.e. disable it.
+2017-06-20 11:22:27,549 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 0 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:22:28,550 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 1 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:22:29,551 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 2 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:22:30,552 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 3 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:22:31,553 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 4 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:22:32,554 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 5 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:22:33,555 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 6 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:22:34,556 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 7 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:22:35,556 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 8 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:22:36,557 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 9 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:22:36,560 INFO org.apache.hadoop.ipc.RPC: Server at secondvm1/192.168.1.155:6000 not available yet, Zzzzz...
+2017-06-20 11:22:38,562 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 0 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:22:39,562 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 1 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:22:40,563 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 2 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:22:41,564 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 3 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:22:42,565 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 4 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:22:43,566 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 5 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:22:44,567 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 6 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:22:45,568 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 7 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:22:46,569 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 8 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:22:47,570 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 9 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:22:47,571 INFO org.apache.hadoop.ipc.RPC: Server at secondvm1/192.168.1.155:6000 not available yet, Zzzzz...
+2017-06-20 11:22:49,572 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 0 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:22:50,573 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 1 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:22:51,574 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 2 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:22:52,575 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 3 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:22:53,575 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 4 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:22:54,576 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 5 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:22:55,577 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 6 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:22:56,578 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 7 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:22:57,579 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 8 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:22:58,580 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 9 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:22:58,580 INFO org.apache.hadoop.ipc.RPC: Server at secondvm1/192.168.1.155:6000 not available yet, Zzzzz...
+2017-06-20 11:23:00,582 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 0 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:23:01,582 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 1 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:23:02,583 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 2 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:23:03,584 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 3 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:23:04,585 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 4 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:23:05,586 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 5 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:23:06,587 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 6 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:23:07,588 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 7 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:23:08,589 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 8 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:23:09,590 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 9 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:23:09,591 INFO org.apache.hadoop.ipc.RPC: Server at secondvm1/192.168.1.155:6000 not available yet, Zzzzz...
+2017-06-20 11:23:11,592 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 0 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:23:12,593 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 1 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:23:13,595 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 2 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:23:14,596 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 3 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:23:15,597 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 4 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:23:16,598 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 5 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:23:17,599 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 6 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:23:18,599 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 7 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:23:19,600 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 8 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:23:20,601 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 9 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:23:20,602 INFO org.apache.hadoop.ipc.RPC: Server at secondvm1/192.168.1.155:6000 not available yet, Zzzzz...
+2017-06-20 11:23:22,603 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 0 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:23:23,604 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 1 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:23:24,605 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 2 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:23:25,606 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 3 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:23:26,608 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 4 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:23:27,609 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 5 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:23:28,610 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: secondvm1/192.168.1.155:6000. Already tried 6 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+2017-06-20 11:23:29,219 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down SecondaryNameNode at secondvm1/192.168.1.155
+************************************************************/
+2017-06-20 11:23:53,634 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting SecondaryNameNode
+STARTUP_MSG:   host = secondvm1/192.168.1.155
+STARTUP_MSG:   args = []
+STARTUP_MSG:   version = 1.2.1-SNAPSHOT
+STARTUP_MSG:   build = git://secondvm1/ on branch master -r 056933d6118a1e771593c941d64801f59c2a50e9; compiled by 'ubuntu' on Tue Jun 20 11:09:31 CEST 2017
+STARTUP_MSG:   java = 1.7.0_21
+************************************************************/
+2017-06-20 11:23:53,710 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: dfs.namenode.edits.toleration.length is set to 0.  Override it with -1, i.e. disable it.
+2017-06-20 11:23:54,315 INFO org.mortbay.log: Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2017-06-20 11:23:54,380 INFO org.apache.hadoop.http.HttpServer: Added global filtersafety (class=org.apache.hadoop.http.HttpServer$QuotingInputFilter)
+2017-06-20 11:23:54,383 INFO org.apache.hadoop.http.HttpServer: Port returned by webServer.getConnectors()[0].getLocalPort() before open() is -1. Opening the listener on 50090
+2017-06-20 11:23:54,384 INFO org.apache.hadoop.http.HttpServer: listener.getLocalPort() returned 50090 webServer.getConnectors()[0].getLocalPort() returned 50090
+2017-06-20 11:23:54,384 INFO org.apache.hadoop.http.HttpServer: Jetty bound to port 50090
+2017-06-20 11:23:54,384 INFO org.mortbay.log: jetty-6.1.26
+2017-06-20 11:23:54,901 INFO org.mortbay.log: Started SelectChannelConnector@0.0.0.0:50090
+2017-06-20 11:23:54,901 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Web server init done
+2017-06-20 11:23:54,901 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Secondary Web-server up at: 0.0.0.0:50090
+2017-06-20 11:23:54,901 WARN org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Checkpoint Period   :3600 secs (60 min)
+2017-06-20 11:23:54,901 WARN org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Log Size Trigger    :67108864 bytes (65536 KB)
+2017-06-20 11:25:52,225 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down SecondaryNameNode at secondvm1/192.168.1.155
+************************************************************/
+2017-06-20 14:31:13,994 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting SecondaryNameNode
+STARTUP_MSG:   host = secondvm1/192.168.1.155
+STARTUP_MSG:   args = []
+STARTUP_MSG:   version = 1.2.1-SNAPSHOT
+STARTUP_MSG:   build = git://secondvm1/ on branch master -r 056933d6118a1e771593c941d64801f59c2a50e9; compiled by 'ubuntu' on Tue Jun 20 11:27:21 CEST 2017
+STARTUP_MSG:   java = 1.7.0_21
+************************************************************/
+2017-06-20 14:31:14,089 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: dfs.namenode.edits.toleration.length is set to 0.  Override it with -1, i.e. disable it.
+2017-06-20 14:31:14,692 INFO org.mortbay.log: Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2017-06-20 14:31:14,797 INFO org.apache.hadoop.http.HttpServer: Added global filtersafety (class=org.apache.hadoop.http.HttpServer$QuotingInputFilter)
+2017-06-20 14:31:14,799 INFO org.apache.hadoop.http.HttpServer: Port returned by webServer.getConnectors()[0].getLocalPort() before open() is -1. Opening the listener on 50090
+2017-06-20 14:31:14,801 INFO org.apache.hadoop.http.HttpServer: listener.getLocalPort() returned 50090 webServer.getConnectors()[0].getLocalPort() returned 50090
+2017-06-20 14:31:14,801 INFO org.apache.hadoop.http.HttpServer: Jetty bound to port 50090
+2017-06-20 14:31:14,801 INFO org.mortbay.log: jetty-6.1.26
+2017-06-20 14:31:15,368 INFO org.mortbay.log: Started SelectChannelConnector@0.0.0.0:50090
+2017-06-20 14:31:15,368 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Web server init done
+2017-06-20 14:31:15,369 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Secondary Web-server up at: 0.0.0.0:50090
+2017-06-20 14:31:15,369 WARN org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Checkpoint Period   :3600 secs (60 min)
+2017-06-20 14:31:15,369 WARN org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Log Size Trigger    :67108864 bytes (65536 KB)
+2017-06-20 14:36:15,442 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50070/getimage?getimage=1
+2017-06-20 14:36:15,505 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Downloaded file fsimage size 112 bytes.
+2017-06-20 14:36:15,505 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50070/getimage?getedit=1
+2017-06-20 14:36:15,525 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Downloaded file edits size 95282 bytes.
+2017-06-20 14:36:15,529 INFO org.apache.hadoop.hdfs.util.GSet: Computing capacity for map BlocksMap
+2017-06-20 14:36:15,529 INFO org.apache.hadoop.hdfs.util.GSet: VM type       = 32-bit
+2017-06-20 14:36:15,529 INFO org.apache.hadoop.hdfs.util.GSet: 2.0% max memory = 932118528
+2017-06-20 14:36:15,529 INFO org.apache.hadoop.hdfs.util.GSet: capacity      = 2^22 = 4194304 entries
+2017-06-20 14:36:15,529 INFO org.apache.hadoop.hdfs.util.GSet: recommended=4194304, actual=4194304
+2017-06-20 14:36:15,554 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: fsOwner=ubuntu
+2017-06-20 14:36:15,554 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: supergroup=supergroup
+2017-06-20 14:36:15,554 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: isPermissionEnabled=true
+2017-06-20 14:36:15,561 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: dfs.block.invalidate.limit=100
+2017-06-20 14:36:15,561 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: isAccessTokenEnabled=false accessKeyUpdateInterval=0 min(s), accessTokenLifetime=0 min(s)
+2017-06-20 14:36:15,567 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: dfs.namenode.edits.toleration.length = -1
+2017-06-20 14:36:15,568 INFO org.apache.hadoop.hdfs.server.namenode.NameNode: Caching file names occuring more than 10 times 
+2017-06-20 14:36:15,611 INFO org.apache.hadoop.hdfs.server.common.Storage: Number of files = 1
+2017-06-20 14:36:15,612 INFO org.apache.hadoop.hdfs.server.common.Storage: Number of files under construction = 0
+2017-06-20 14:36:15,769 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: EOF of /home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits, reached end of edit log Number of transactions found: 1174.  Bytes read: 95282
+2017-06-20 14:36:15,769 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Edits file /home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits of size 95282 edits # 1174 loaded in 0 seconds.
+2017-06-20 14:36:15,769 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 0 SyncTimes(ms): 0 
+2017-06-20 14:36:15,780 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=95282, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 14:36:15,780 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 95282, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 14:36:15,781 INFO org.apache.hadoop.hdfs.server.common.Storage: Image file of size 562 saved in 0 seconds.
+2017-06-20 14:36:15,862 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 14:36:15,863 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 14:36:15,890 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Posted URL 0.0.0.0:50070putimage=1&port=50090&machine=0.0.0.0&token=-41:485986869:0:1497962175000:1497961871547&newChecksum=cae813f861f31b580f2f14352ab384ce
+2017-06-20 14:36:15,890 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50070/getimage?putimage=1&port=50090&machine=0.0.0.0&token=-41:485986869:0:1497962175000:1497961871547&newChecksum=cae813f861f31b580f2f14352ab384ce
+2017-06-20 14:36:16,020 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Checkpoint done. New Image Size: 562
+2017-06-20 15:36:16,063 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 0 SyncTimes(ms): 0 
+2017-06-20 15:36:16,065 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 15:36:16,065 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 15:36:16,083 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50070/getimage?getimage=1
+2017-06-20 15:36:16,087 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Downloaded file fsimage size 562 bytes.
+2017-06-20 15:36:16,088 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50070/getimage?getedit=1
+2017-06-20 15:36:16,121 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Downloaded file edits size 1150829 bytes.
+2017-06-20 15:36:16,121 INFO org.apache.hadoop.hdfs.util.GSet: Computing capacity for map BlocksMap
+2017-06-20 15:36:16,121 INFO org.apache.hadoop.hdfs.util.GSet: VM type       = 32-bit
+2017-06-20 15:36:16,121 INFO org.apache.hadoop.hdfs.util.GSet: 2.0% max memory = 932118528
+2017-06-20 15:36:16,121 INFO org.apache.hadoop.hdfs.util.GSet: capacity      = 2^22 = 4194304 entries
+2017-06-20 15:36:16,121 INFO org.apache.hadoop.hdfs.util.GSet: recommended=4194304, actual=4194304
+2017-06-20 15:36:16,141 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: fsOwner=ubuntu
+2017-06-20 15:36:16,141 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: supergroup=supergroup
+2017-06-20 15:36:16,141 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: isPermissionEnabled=true
+2017-06-20 15:36:16,141 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: dfs.block.invalidate.limit=100
+2017-06-20 15:36:16,141 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: isAccessTokenEnabled=false accessKeyUpdateInterval=0 min(s), accessTokenLifetime=0 min(s)
+2017-06-20 15:36:16,141 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: dfs.namenode.edits.toleration.length = -1
+2017-06-20 15:36:16,142 INFO org.apache.hadoop.hdfs.server.namenode.NameNode: Caching file names occuring more than 10 times 
+2017-06-20 15:36:16,142 INFO org.apache.hadoop.hdfs.server.common.Storage: Number of files = 6
+2017-06-20 15:36:16,143 INFO org.apache.hadoop.hdfs.server.common.Storage: Number of files under construction = 0
+2017-06-20 15:36:16,585 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: EOF of /home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits, reached end of edit log Number of transactions found: 14164.  Bytes read: 1150829
+2017-06-20 15:36:16,585 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Edits file /home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits of size 1150829 edits # 14164 loaded in 0 seconds.
+2017-06-20 15:36:16,585 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 0 SyncTimes(ms): 0 
+2017-06-20 15:36:16,592 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=1150829, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 15:36:16,592 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 1150829, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 15:36:16,592 INFO org.apache.hadoop.hdfs.server.common.Storage: Image file of size 562 saved in 0 seconds.
+2017-06-20 15:36:16,600 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 15:36:16,601 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 15:36:16,621 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Posted URL 0.0.0.0:50070putimage=1&port=50090&machine=0.0.0.0&token=-41:485986869:0:1497965776000:1497962175994&newChecksum=9308d9b9e8cdd3fe00b7a99c4d4a9ff8
+2017-06-20 15:36:16,621 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50070/getimage?putimage=1&port=50090&machine=0.0.0.0&token=-41:485986869:0:1497965776000:1497962175994&newChecksum=9308d9b9e8cdd3fe00b7a99c4d4a9ff8
+2017-06-20 15:36:16,656 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Checkpoint done. New Image Size: 562
+2017-06-20 16:36:16,707 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 0 SyncTimes(ms): 0 
+2017-06-20 16:36:16,708 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 16:36:16,708 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 16:36:16,728 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50070/getimage?getimage=1
+2017-06-20 16:36:16,732 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Downloaded file fsimage size 562 bytes.
+2017-06-20 16:36:16,732 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50070/getimage?getedit=1
+2017-06-20 16:36:16,762 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Downloaded file edits size 1150504 bytes.
+2017-06-20 16:36:16,762 INFO org.apache.hadoop.hdfs.util.GSet: Computing capacity for map BlocksMap
+2017-06-20 16:36:16,762 INFO org.apache.hadoop.hdfs.util.GSet: VM type       = 32-bit
+2017-06-20 16:36:16,763 INFO org.apache.hadoop.hdfs.util.GSet: 2.0% max memory = 932118528
+2017-06-20 16:36:16,763 INFO org.apache.hadoop.hdfs.util.GSet: capacity      = 2^22 = 4194304 entries
+2017-06-20 16:36:16,763 INFO org.apache.hadoop.hdfs.util.GSet: recommended=4194304, actual=4194304
+2017-06-20 16:36:16,780 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: fsOwner=ubuntu
+2017-06-20 16:36:16,780 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: supergroup=supergroup
+2017-06-20 16:36:16,780 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: isPermissionEnabled=true
+2017-06-20 16:36:16,780 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: dfs.block.invalidate.limit=100
+2017-06-20 16:36:16,780 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: isAccessTokenEnabled=false accessKeyUpdateInterval=0 min(s), accessTokenLifetime=0 min(s)
+2017-06-20 16:36:16,780 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: dfs.namenode.edits.toleration.length = -1
+2017-06-20 16:36:16,780 INFO org.apache.hadoop.hdfs.server.namenode.NameNode: Caching file names occuring more than 10 times 
+2017-06-20 16:36:16,787 INFO org.apache.hadoop.hdfs.server.common.Storage: Number of files = 6
+2017-06-20 16:36:16,795 INFO org.apache.hadoop.hdfs.server.common.Storage: Number of files under construction = 0
+2017-06-20 16:36:17,010 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: EOF of /home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits, reached end of edit log Number of transactions found: 14160.  Bytes read: 1150504
+2017-06-20 16:36:17,011 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Edits file /home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits of size 1150504 edits # 14160 loaded in 0 seconds.
+2017-06-20 16:36:17,011 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 0 SyncTimes(ms): 0 
+2017-06-20 16:36:17,018 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=1150504, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 16:36:17,018 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 1150504, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 16:36:17,018 INFO org.apache.hadoop.hdfs.server.common.Storage: Image file of size 562 saved in 0 seconds.
+2017-06-20 16:36:17,033 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 16:36:17,033 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 16:36:17,051 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Posted URL 0.0.0.0:50070putimage=1&port=50090&machine=0.0.0.0&token=-41:485986869:0:1497969376000:1497965776630&newChecksum=0895ce50e8c12b575145b45f1a6490e8
+2017-06-20 16:36:17,051 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50070/getimage?putimage=1&port=50090&machine=0.0.0.0&token=-41:485986869:0:1497969376000:1497965776630&newChecksum=0895ce50e8c12b575145b45f1a6490e8
+2017-06-20 16:36:17,100 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Checkpoint done. New Image Size: 562
+2017-06-20 17:36:17,147 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 0 SyncTimes(ms): 0 
+2017-06-20 17:36:17,148 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 17:36:17,148 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 17:36:17,166 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50070/getimage?getimage=1
+2017-06-20 17:36:17,171 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Downloaded file fsimage size 562 bytes.
+2017-06-20 17:36:17,171 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50070/getimage?getedit=1
+2017-06-20 17:36:17,196 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Downloaded file edits size 1150504 bytes.
+2017-06-20 17:36:17,197 INFO org.apache.hadoop.hdfs.util.GSet: Computing capacity for map BlocksMap
+2017-06-20 17:36:17,197 INFO org.apache.hadoop.hdfs.util.GSet: VM type       = 32-bit
+2017-06-20 17:36:17,197 INFO org.apache.hadoop.hdfs.util.GSet: 2.0% max memory = 932118528
+2017-06-20 17:36:17,197 INFO org.apache.hadoop.hdfs.util.GSet: capacity      = 2^22 = 4194304 entries
+2017-06-20 17:36:17,197 INFO org.apache.hadoop.hdfs.util.GSet: recommended=4194304, actual=4194304
+2017-06-20 17:36:17,209 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: fsOwner=ubuntu
+2017-06-20 17:36:17,209 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: supergroup=supergroup
+2017-06-20 17:36:17,209 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: isPermissionEnabled=true
+2017-06-20 17:36:17,209 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: dfs.block.invalidate.limit=100
+2017-06-20 17:36:17,209 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: isAccessTokenEnabled=false accessKeyUpdateInterval=0 min(s), accessTokenLifetime=0 min(s)
+2017-06-20 17:36:17,209 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: dfs.namenode.edits.toleration.length = -1
+2017-06-20 17:36:17,209 INFO org.apache.hadoop.hdfs.server.namenode.NameNode: Caching file names occuring more than 10 times 
+2017-06-20 17:36:17,210 INFO org.apache.hadoop.hdfs.server.common.Storage: Number of files = 6
+2017-06-20 17:36:17,211 INFO org.apache.hadoop.hdfs.server.common.Storage: Number of files under construction = 0
+2017-06-20 17:36:17,346 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: EOF of /home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits, reached end of edit log Number of transactions found: 14160.  Bytes read: 1150504
+2017-06-20 17:36:17,347 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Edits file /home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits of size 1150504 edits # 14160 loaded in 0 seconds.
+2017-06-20 17:36:17,347 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 0 SyncTimes(ms): 0 
+2017-06-20 17:36:17,362 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=1150504, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 17:36:17,362 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 1150504, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 17:36:17,362 INFO org.apache.hadoop.hdfs.server.common.Storage: Image file of size 562 saved in 0 seconds.
+2017-06-20 17:36:17,372 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 17:36:17,373 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 17:36:17,392 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Posted URL 0.0.0.0:50070putimage=1&port=50090&machine=0.0.0.0&token=-41:485986869:0:1497972977000:1497969377060&newChecksum=d4e41920d549a572efba3dcd41d782f7
+2017-06-20 17:36:17,392 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50070/getimage?putimage=1&port=50090&machine=0.0.0.0&token=-41:485986869:0:1497972977000:1497969377060&newChecksum=d4e41920d549a572efba3dcd41d782f7
+2017-06-20 17:36:17,424 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Checkpoint done. New Image Size: 562
+2017-06-20 18:36:17,470 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 0 SyncTimes(ms): 0 
+2017-06-20 18:36:17,471 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 18:36:17,471 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 18:36:17,488 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50070/getimage?getimage=1
+2017-06-20 18:36:17,492 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Downloaded file fsimage size 562 bytes.
+2017-06-20 18:36:17,492 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50070/getimage?getedit=1
+2017-06-20 18:36:17,516 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Downloaded file edits size 1152129 bytes.
+2017-06-20 18:36:17,516 INFO org.apache.hadoop.hdfs.util.GSet: Computing capacity for map BlocksMap
+2017-06-20 18:36:17,516 INFO org.apache.hadoop.hdfs.util.GSet: VM type       = 32-bit
+2017-06-20 18:36:17,516 INFO org.apache.hadoop.hdfs.util.GSet: 2.0% max memory = 932118528
+2017-06-20 18:36:17,516 INFO org.apache.hadoop.hdfs.util.GSet: capacity      = 2^22 = 4194304 entries
+2017-06-20 18:36:17,516 INFO org.apache.hadoop.hdfs.util.GSet: recommended=4194304, actual=4194304
+2017-06-20 18:36:17,519 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: fsOwner=ubuntu
+2017-06-20 18:36:17,519 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: supergroup=supergroup
+2017-06-20 18:36:17,519 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: isPermissionEnabled=true
+2017-06-20 18:36:17,520 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: dfs.block.invalidate.limit=100
+2017-06-20 18:36:17,520 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: isAccessTokenEnabled=false accessKeyUpdateInterval=0 min(s), accessTokenLifetime=0 min(s)
+2017-06-20 18:36:17,520 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: dfs.namenode.edits.toleration.length = -1
+2017-06-20 18:36:17,520 INFO org.apache.hadoop.hdfs.server.namenode.NameNode: Caching file names occuring more than 10 times 
+2017-06-20 18:36:17,520 INFO org.apache.hadoop.hdfs.server.common.Storage: Number of files = 6
+2017-06-20 18:36:17,520 INFO org.apache.hadoop.hdfs.server.common.Storage: Number of files under construction = 0
+2017-06-20 18:36:17,755 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: EOF of /home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits, reached end of edit log Number of transactions found: 14180.  Bytes read: 1152129
+2017-06-20 18:36:17,755 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Edits file /home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits of size 1152129 edits # 14180 loaded in 0 seconds.
+2017-06-20 18:36:17,755 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 0 SyncTimes(ms): 0 
+2017-06-20 18:36:17,771 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=1152129, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 18:36:17,771 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 1152129, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 18:36:17,773 INFO org.apache.hadoop.hdfs.server.common.Storage: Image file of size 562 saved in 0 seconds.
+2017-06-20 18:36:17,789 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 18:36:17,789 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 18:36:17,818 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Posted URL 0.0.0.0:50070putimage=1&port=50090&machine=0.0.0.0&token=-41:485986869:0:1497976577000:1497972977403&newChecksum=f15e294dc6e3d52c001fbbea26ecc8b7
+2017-06-20 18:36:17,818 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50070/getimage?putimage=1&port=50090&machine=0.0.0.0&token=-41:485986869:0:1497976577000:1497972977403&newChecksum=f15e294dc6e3d52c001fbbea26ecc8b7
+2017-06-20 18:36:17,856 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Checkpoint done. New Image Size: 562
+2017-06-20 19:29:27,117 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down SecondaryNameNode at secondvm1/192.168.1.155
+************************************************************/
+2017-06-20 19:31:43,638 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting SecondaryNameNode
+STARTUP_MSG:   host = secondvm1/192.168.1.155
+STARTUP_MSG:   args = []
+STARTUP_MSG:   version = 1.2.1-SNAPSHOT
+STARTUP_MSG:   build = git://secondvm1/ on branch master -r 056933d6118a1e771593c941d64801f59c2a50e9; compiled by 'ubuntu' on Tue Jun 20 14:35:21 CEST 2017
+STARTUP_MSG:   java = 1.7.0_21
+************************************************************/
+2017-06-20 19:31:43,712 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: dfs.namenode.edits.toleration.length is set to 0.  Override it with -1, i.e. disable it.
+2017-06-20 19:31:44,356 INFO org.mortbay.log: Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2017-06-20 19:31:44,415 INFO org.apache.hadoop.http.HttpServer: Added global filtersafety (class=org.apache.hadoop.http.HttpServer$QuotingInputFilter)
+2017-06-20 19:31:44,418 INFO org.apache.hadoop.http.HttpServer: Port returned by webServer.getConnectors()[0].getLocalPort() before open() is -1. Opening the listener on 50090
+2017-06-20 19:31:44,419 INFO org.apache.hadoop.http.HttpServer: listener.getLocalPort() returned 50090 webServer.getConnectors()[0].getLocalPort() returned 50090
+2017-06-20 19:31:44,419 INFO org.apache.hadoop.http.HttpServer: Jetty bound to port 50090
+2017-06-20 19:31:44,419 INFO org.mortbay.log: jetty-6.1.26
+2017-06-20 19:31:44,873 INFO org.mortbay.log: Started SelectChannelConnector@0.0.0.0:50090
+2017-06-20 19:31:44,873 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Web server init done
+2017-06-20 19:31:44,873 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Secondary Web-server up at: 0.0.0.0:50090
+2017-06-20 19:31:44,873 WARN org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Checkpoint Period   :3600 secs (60 min)
+2017-06-20 19:31:44,873 WARN org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Log Size Trigger    :67108864 bytes (65536 KB)
+2017-06-20 19:32:07,797 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down SecondaryNameNode at secondvm1/192.168.1.155
+************************************************************/
+2017-06-20 19:32:20,909 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting SecondaryNameNode
+STARTUP_MSG:   host = secondvm1/192.168.1.155
+STARTUP_MSG:   args = []
+STARTUP_MSG:   version = 1.2.1-SNAPSHOT
+STARTUP_MSG:   build = git://secondvm1/ on branch master -r 056933d6118a1e771593c941d64801f59c2a50e9; compiled by 'ubuntu' on Tue Jun 20 14:35:21 CEST 2017
+STARTUP_MSG:   java = 1.7.0_21
+************************************************************/
+2017-06-20 19:32:21,011 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: dfs.namenode.edits.toleration.length is set to 0.  Override it with -1, i.e. disable it.
+2017-06-20 19:32:21,638 INFO org.mortbay.log: Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2017-06-20 19:32:21,718 INFO org.apache.hadoop.http.HttpServer: Added global filtersafety (class=org.apache.hadoop.http.HttpServer$QuotingInputFilter)
+2017-06-20 19:32:21,721 INFO org.apache.hadoop.http.HttpServer: Port returned by webServer.getConnectors()[0].getLocalPort() before open() is -1. Opening the listener on 50090
+2017-06-20 19:32:21,722 INFO org.apache.hadoop.http.HttpServer: listener.getLocalPort() returned 50090 webServer.getConnectors()[0].getLocalPort() returned 50090
+2017-06-20 19:32:21,722 INFO org.apache.hadoop.http.HttpServer: Jetty bound to port 50090
+2017-06-20 19:32:21,722 INFO org.mortbay.log: jetty-6.1.26
+2017-06-20 19:32:22,198 INFO org.mortbay.log: Started SelectChannelConnector@0.0.0.0:50090
+2017-06-20 19:32:22,198 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Web server init done
+2017-06-20 19:32:22,198 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Secondary Web-server up at: 0.0.0.0:50090
+2017-06-20 19:32:22,198 WARN org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Checkpoint Period   :3600 secs (60 min)
+2017-06-20 19:32:22,198 WARN org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Log Size Trigger    :67108864 bytes (65536 KB)
+2017-06-20 19:33:01,245 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down SecondaryNameNode at secondvm1/192.168.1.155
+************************************************************/
+2017-06-20 19:38:43,907 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting SecondaryNameNode
+STARTUP_MSG:   host = secondvm1/192.168.1.155
+STARTUP_MSG:   args = []
+STARTUP_MSG:   version = 1.2.1-SNAPSHOT
+STARTUP_MSG:   build = git://secondvm1/ on branch master -r 056933d6118a1e771593c941d64801f59c2a50e9; compiled by 'ubuntu' on Tue Jun 20 14:35:21 CEST 2017
+STARTUP_MSG:   java = 1.7.0_21
+************************************************************/
+2017-06-20 19:38:44,007 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: dfs.namenode.edits.toleration.length is set to 0.  Override it with -1, i.e. disable it.
+2017-06-20 19:38:44,632 INFO org.mortbay.log: Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2017-06-20 19:38:44,696 INFO org.apache.hadoop.http.HttpServer: Added global filtersafety (class=org.apache.hadoop.http.HttpServer$QuotingInputFilter)
+2017-06-20 19:38:44,699 INFO org.apache.hadoop.http.HttpServer: Port returned by webServer.getConnectors()[0].getLocalPort() before open() is -1. Opening the listener on 50090
+2017-06-20 19:38:44,700 INFO org.apache.hadoop.http.HttpServer: listener.getLocalPort() returned 50090 webServer.getConnectors()[0].getLocalPort() returned 50090
+2017-06-20 19:38:44,700 INFO org.apache.hadoop.http.HttpServer: Jetty bound to port 50090
+2017-06-20 19:38:44,701 INFO org.mortbay.log: jetty-6.1.26
+2017-06-20 19:38:45,063 INFO org.mortbay.log: Started SelectChannelConnector@0.0.0.0:50090
+2017-06-20 19:38:45,063 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Web server init done
+2017-06-20 19:38:45,063 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Secondary Web-server up at: 0.0.0.0:50090
+2017-06-20 19:38:45,063 WARN org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Checkpoint Period   :3600 secs (60 min)
+2017-06-20 19:38:45,064 WARN org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Log Size Trigger    :67108864 bytes (65536 KB)
+2017-06-20 19:43:45,207 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50070/getimage?getimage=1
+2017-06-20 19:43:45,357 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Downloaded file fsimage size 112 bytes.
+2017-06-20 19:43:45,357 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50070/getimage?getedit=1
+2017-06-20 19:43:45,360 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Downloaded file edits size 9595 bytes.
+2017-06-20 19:43:45,368 INFO org.apache.hadoop.hdfs.util.GSet: Computing capacity for map BlocksMap
+2017-06-20 19:43:45,368 INFO org.apache.hadoop.hdfs.util.GSet: VM type       = 32-bit
+2017-06-20 19:43:45,369 INFO org.apache.hadoop.hdfs.util.GSet: 2.0% max memory = 932118528
+2017-06-20 19:43:45,369 INFO org.apache.hadoop.hdfs.util.GSet: capacity      = 2^22 = 4194304 entries
+2017-06-20 19:43:45,369 INFO org.apache.hadoop.hdfs.util.GSet: recommended=4194304, actual=4194304
+2017-06-20 19:43:45,400 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: fsOwner=ubuntu
+2017-06-20 19:43:45,400 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: supergroup=supergroup
+2017-06-20 19:43:45,400 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: isPermissionEnabled=true
+2017-06-20 19:43:45,442 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: dfs.block.invalidate.limit=100
+2017-06-20 19:43:45,442 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: isAccessTokenEnabled=false accessKeyUpdateInterval=0 min(s), accessTokenLifetime=0 min(s)
+2017-06-20 19:43:45,468 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: dfs.namenode.edits.toleration.length = -1
+2017-06-20 19:43:45,468 INFO org.apache.hadoop.hdfs.server.namenode.NameNode: Caching file names occuring more than 10 times 
+2017-06-20 19:43:45,551 INFO org.apache.hadoop.hdfs.server.common.Storage: Number of files = 1
+2017-06-20 19:43:45,551 INFO org.apache.hadoop.hdfs.server.common.Storage: Number of files under construction = 0
+2017-06-20 19:43:45,587 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: EOF of /home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits, reached end of edit log Number of transactions found: 41.  Bytes read: 9595
+2017-06-20 19:43:45,587 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Edits file /home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits of size 9595 edits # 41 loaded in 0 seconds.
+2017-06-20 19:43:45,587 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 0 Total time for transactions(ms): 0 Number of transactions batched in Syncs: 0 Number of syncs: 0 SyncTimes(ms): 0 
+2017-06-20 19:43:45,591 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=9595, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 19:43:45,591 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 9595, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 19:43:45,592 INFO org.apache.hadoop.hdfs.server.common.Storage: Image file of size 1404 saved in 0 seconds.
+2017-06-20 19:43:45,600 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: closing edit log: position=4, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 19:43:45,601 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: close success: truncate to 4, editlog=/home/ubuntu/hadoop-temp/dfs/namesecondary/current/edits
+2017-06-20 19:43:45,627 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Posted URL 0.0.0.0:50070putimage=1&port=50090&machine=0.0.0.0&token=-41:1844621465:0:1497980625000:1497980321199&newChecksum=4233b818c4a3a74bb36ad6bec40dad04
+2017-06-20 19:43:45,627 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://0.0.0.0:50070/getimage?putimage=1&port=50090&machine=0.0.0.0&token=-41:1844621465:0:1497980625000:1497980321199&newChecksum=4233b818c4a3a74bb36ad6bec40dad04
+2017-06-20 19:43:45,880 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Checkpoint done. New Image Size: 1404

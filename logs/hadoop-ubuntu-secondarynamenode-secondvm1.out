@@ -1,93 +1,17 @@
-java.io.IOException: Call to secondvm1/192.168.1.155:6000 failed on local exception: java.io.EOFException
-	at org.apache.hadoop.ipc.Client.wrapException(Client.java:1144)
-	at org.apache.hadoop.ipc.Client.call(Client.java:1112)
-	at org.apache.hadoop.ipc.RPC$Invoker.invoke(RPC.java:229)
-	at com.sun.proxy.$Proxy5.rollEditLog(Unknown Source)
-	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doCheckpoint(SecondaryNameNode.java:512)
-	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:396)
-	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:360)
-	at java.lang.Thread.run(Thread.java:722)
-Caused by: java.io.EOFException
-	at java.io.DataInputStream.readInt(DataInputStream.java:392)
-	at org.apache.hadoop.ipc.Client$Connection.receiveResponse(Client.java:841)
-	at org.apache.hadoop.ipc.Client$Connection.run(Client.java:786)
-java.net.ConnectException: Call to secondvm1/192.168.1.155:6000 failed on connection exception: java.net.ConnectException: Connection refused
-	at org.apache.hadoop.ipc.Client.wrapException(Client.java:1136)
-	at org.apache.hadoop.ipc.Client.call(Client.java:1112)
-	at org.apache.hadoop.ipc.RPC$Invoker.invoke(RPC.java:229)
-	at com.sun.proxy.$Proxy5.getEditLogSize(Unknown Source)
-	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:393)
-	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:360)
-	at java.lang.Thread.run(Thread.java:722)
-Caused by: java.net.ConnectException: Connection refused
-	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
-	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:692)
-	at org.apache.hadoop.net.SocketIOWithTimeout.connect(SocketIOWithTimeout.java:206)
-	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:511)
-	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:481)
-	at org.apache.hadoop.ipc.Client$Connection.setupConnection(Client.java:453)
-	at org.apache.hadoop.ipc.Client$Connection.setupIOstreams(Client.java:579)
-	at org.apache.hadoop.ipc.Client$Connection.access$2100(Client.java:202)
-	at org.apache.hadoop.ipc.Client.getConnection(Client.java:1243)
-	at org.apache.hadoop.ipc.Client.call(Client.java:1087)
-	... 5 more
-java.net.ConnectException: Call to secondvm1/192.168.1.155:6000 failed on connection exception: java.net.ConnectException: Connection refused
-	at org.apache.hadoop.ipc.Client.wrapException(Client.java:1136)
-	at org.apache.hadoop.ipc.Client.call(Client.java:1112)
-	at org.apache.hadoop.ipc.RPC$Invoker.invoke(RPC.java:229)
-	at com.sun.proxy.$Proxy5.getEditLogSize(Unknown Source)
-	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:393)
-	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:360)
-	at java.lang.Thread.run(Thread.java:722)
-Caused by: java.net.ConnectException: Connection refused
-	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
-	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:692)
-	at org.apache.hadoop.net.SocketIOWithTimeout.connect(SocketIOWithTimeout.java:206)
-	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:511)
-	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:481)
-	at org.apache.hadoop.ipc.Client$Connection.setupConnection(Client.java:453)
-	at org.apache.hadoop.ipc.Client$Connection.setupIOstreams(Client.java:579)
-	at org.apache.hadoop.ipc.Client$Connection.access$2100(Client.java:202)
-	at org.apache.hadoop.ipc.Client.getConnection(Client.java:1243)
-	at org.apache.hadoop.ipc.Client.call(Client.java:1087)
-	... 5 more
-java.net.ConnectException: Call to secondvm1/192.168.1.155:6000 failed on connection exception: java.net.ConnectException: Connection refused
-	at org.apache.hadoop.ipc.Client.wrapException(Client.java:1136)
-	at org.apache.hadoop.ipc.Client.call(Client.java:1112)
-	at org.apache.hadoop.ipc.RPC$Invoker.invoke(RPC.java:229)
-	at com.sun.proxy.$Proxy5.getEditLogSize(Unknown Source)
-	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:393)
-	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:360)
-	at java.lang.Thread.run(Thread.java:722)
-Caused by: java.net.ConnectException: Connection refused
-	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
-	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:692)
-	at org.apache.hadoop.net.SocketIOWithTimeout.connect(SocketIOWithTimeout.java:206)
-	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:511)
-	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:481)
-	at org.apache.hadoop.ipc.Client$Connection.setupConnection(Client.java:453)
-	at org.apache.hadoop.ipc.Client$Connection.setupIOstreams(Client.java:579)
-	at org.apache.hadoop.ipc.Client$Connection.access$2100(Client.java:202)
-	at org.apache.hadoop.ipc.Client.getConnection(Client.java:1243)
-	at org.apache.hadoop.ipc.Client.call(Client.java:1087)
-	... 5 more
-java.net.ConnectException: Call to secondvm1/192.168.1.155:6000 failed on connection exception: java.net.ConnectException: Connection refused
-	at org.apache.hadoop.ipc.Client.wrapException(Client.java:1136)
-	at org.apache.hadoop.ipc.Client.call(Client.java:1112)
-	at org.apache.hadoop.ipc.RPC$Invoker.invoke(RPC.java:229)
-	at com.sun.proxy.$Proxy5.getEditLogSize(Unknown Source)
-	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.doWork(SecondaryNameNode.java:393)
-	at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.run(SecondaryNameNode.java:360)
-	at java.lang.Thread.run(Thread.java:722)
-Caused by: java.net.ConnectException: Connection refused
-	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
-	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:692)
-	at org.apache.hadoop.net.SocketIOWithTimeout.connect(SocketIOWithTimeout.java:206)
-	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:511)
-	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:481)
-	at org.apache.hadoop.ipc.Client$Connection.setupConnection(Client.java:453)
-	at org.apache.hadoop.ipc.Client$Connection.setupIOstreams(Client.java:579)
-	at org.apache.hadoop.ipc.Client$Connection.access$2100(Client.java:202)
-	at org.apache.hadoop.ipc.Client.getConnection(Client.java:1243)
-	at org.apache.hadoop.ipc.Client.call(Client.java:1087)
-	... 5 more
+ulimit -a for user ubuntu
+core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 15999
+max locked memory       (kbytes, -l) 64
+max memory size         (kbytes, -m) unlimited
+open files                      (-n) 1024
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) 8192
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 15999
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
