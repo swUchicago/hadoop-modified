@@ -196,6 +196,7 @@ public abstract class FileInputFormat<K, V> implements InputFormat<K, V> {
     if (!errors.isEmpty()) {
       throw new InvalidInputException(errors);
     }
+    LOG.info("testing");
     LOG.info("Total input paths to process : " + result.size()); 
     return result.toArray(new FileStatus[result.size()]);
   }
