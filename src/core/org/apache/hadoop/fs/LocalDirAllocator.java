@@ -376,6 +376,7 @@ public class LocalDirAllocator {
       if (returnPath != null) {
         return returnPath;
       }
+      LOG.info("Task " + getTaskID() + " is failed...");
       //no path found
       throw new DiskErrorException("Could not find any valid local " +
           "directory for " + pathStr);

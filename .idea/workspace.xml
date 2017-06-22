@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a59572e9-b4df-4a34-a552-19d0d67e73c5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/MapTask.java" afterPath="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/MapTask.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core/org/apache/hadoop/fs/LocalDirAllocator.java" afterPath="$PROJECT_DIR$/src/core/org/apache/hadoop/fs/LocalDirAllocator.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,21 +55,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MapTask.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MapTask.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/MapTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="1235" column="27" lean-forward="true" selection-start-line="1235" selection-start-column="27" selection-end-line="1235" selection-end-column="27" />
+            <state relative-caret-position="22905">
+              <caret line="1624" column="45" lean-forward="false" selection-start-line="1624" selection-start-column="34" selection-end-line="1624" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LocalDirAllocator.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LocalDirAllocator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/core/org/apache/hadoop/fs/LocalDirAllocator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="379" column="29" lean-forward="true" selection-start-line="379" selection-start-column="29" selection-end-line="379" selection-end-column="29" />
+            <state relative-caret-position="145">
+              <caret line="379" column="21" lean-forward="true" selection-start-line="379" selection-start-column="21" selection-end-line="379" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -123,19 +122,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>create</find>
-      <find>createT</find>
-      <find>createTmp</find>
-      <find>createTmpF</find>
-      <find>createTmpFileF</find>
-      <find>createTmpFileFo</find>
-      <find>createTmpFileFor</find>
-      <find>createTmpFileForW</find>
-      <find>createTmpFileForWr</find>
-      <find>createTmpFileForWri</find>
-      <find>createTmpFileForWrite</find>
-      <find>createTmpFile</find>
-      <find>direc</find>
       <find>directory</find>
       <find>local director</find>
       <find>catch(IOException</find>
@@ -147,12 +133,25 @@
       <find>Task i</find>
       <find>Task I</find>
       <find>Task Id</find>
-      <find>Task Id :</find>
       <find>getTaskId</find>
-      <find>getTaskID</find>
       <find>...</find>
       <find>could not find any valid local</find>
       <find>Spill failed</find>
+      <find>Task Id :</find>
+      <find>U</find>
+      <find>User</find>
+      <find>UserGroup</find>
+      <find>UserGroupI</find>
+      <find>UserGroupIn</find>
+      <find>UserGroupInf</find>
+      <find>UserGroupInform</find>
+      <find>UserGroupInformation</find>
+      <find>get</find>
+      <find>getTask</find>
+      <find>a</find>
+      <find>adf</find>
+      <find>getTaskID</find>
+      <find>getTaskID()</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src</dir>
@@ -170,9 +169,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/TaskTracker.java" />
-        <option value="$PROJECT_DIR$/src/core/org/apache/hadoop/fs/LocalDirAllocator.java" />
         <option value="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/Controller.java" />
         <option value="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/MapTask.java" />
+        <option value="$PROJECT_DIR$/src/core/org/apache/hadoop/fs/LocalDirAllocator.java" />
       </list>
     </option>
   </component>
@@ -243,58 +242,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mapred" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hadoop-modified" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hadoop-modified" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mapred" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hadoop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mapreduce" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hadoop-modified" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hadoop-modified" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mapred" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hadoop" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -742,12 +689,12 @@
       <option name="presentableId" value="Default" />
       <updated>1498111639385</updated>
       <workItem from="1498111640749" duration="174000" />
-      <workItem from="1498124583726" duration="6037000" />
+      <workItem from="1498124583726" duration="6536000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6211000" />
+    <option name="totallyTimeSpent" value="6710000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="730" extended-state="6" />
@@ -951,18 +898,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/org/apache/hadoop/fs/LocalDirAllocator.java">
+    <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/pipes/BinaryProtocol.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="379" column="29" lean-forward="true" selection-start-line="379" selection-start-column="29" selection-end-line="379" selection-end-column="29" />
+        <state relative-caret-position="139">
+          <caret line="141" column="40" lean-forward="false" selection-start-line="141" selection-start-column="40" selection-end-line="141" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/MapTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="1235" column="27" lean-forward="true" selection-start-line="1235" selection-start-column="27" selection-end-line="1235" selection-end-column="27" />
+        <state relative-caret-position="22905">
+          <caret line="1624" column="45" lean-forward="false" selection-start-line="1624" selection-start-column="34" selection-end-line="1624" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/org/apache/hadoop/fs/LocalDirAllocator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="379" column="21" lean-forward="true" selection-start-line="379" selection-start-column="21" selection-end-line="379" selection-end-column="21" />
           <folding />
         </state>
       </provider>
