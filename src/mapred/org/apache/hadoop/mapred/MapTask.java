@@ -1036,7 +1036,7 @@ class MapTask extends Task {
         boolean kvfull;
         do {
           if (sortSpillException != null) {
-            Log.info("Task " + getTaskID() + " is failed...");
+            LOG.info("Task " + getTaskID() + " is failed...");
             throw (IOException)new IOException("Spill failed"
                 ).initCause(sortSpillException);
           }
@@ -1221,7 +1221,7 @@ class MapTask extends Task {
         try {
           do {
             if (sortSpillException != null) {
-              Log.info("Task " + getTaskID() + " is failed...");
+              LOG.info("Task " + getTaskID() + " is failed...");
               throw (IOException)new IOException("Spill failed"
                   ).initCause(sortSpillException);
             }
@@ -1301,7 +1301,7 @@ class MapTask extends Task {
           spillDone.await();
         }
         if (sortSpillException != null) {
-          Log.info("Task " + getTaskID() + " is failed...");
+          LOG.info("Task " + getTaskID() + " is failed...");
           throw (IOException)new IOException("Spill failed"
               ).initCause(sortSpillException);
         }
@@ -1328,7 +1328,7 @@ class MapTask extends Task {
         spillThread.interrupt();
         spillThread.join();
       } catch (InterruptedException e) {
-        Log.info("Task " + getTaskID() + " is failed...");
+        LOG.info("Task " + getTaskID() + " is failed...");
         throw (IOException)new IOException("Spill failed"
             ).initCause(e);
       }
