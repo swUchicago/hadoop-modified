@@ -19,7 +19,7 @@ public class Controller {
     private static ArrayList<Controller.Pair> exceptions;
 
     private Controller() {
-        exceptions = new ArrayList<>();
+        exceptions = new ArrayList<Pair>();
     }
 
     public static Controller getInstance() {
