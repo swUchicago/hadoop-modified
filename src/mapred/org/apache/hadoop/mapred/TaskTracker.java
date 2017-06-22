@@ -56,6 +56,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import mapred.org.apache.hadoop.mapred.Controller;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.conf.Configuration;
@@ -121,7 +122,8 @@ import org.apache.hadoop.security.Credentials;
  *******************************************************/
 public class TaskTracker implements MRConstants, TaskUmbilicalProtocol,
     Runnable, TaskTrackerMXBean {
-  
+
+  static Controller controller = new Controller();
   /**
    * @deprecated
    */
@@ -1983,7 +1985,8 @@ public class TaskTracker implements MRConstants, TaskUmbilicalProtocol,
       askForNewTask = 
         ((status.countOccupiedMapSlots() < maxMapSlots || 
           status.countOccupiedReduceSlots() < maxReduceSlots) && 
-         acceptNewTasks); 
+         acceptNewTasks);
+      System.out.println("Minspacestart = " + controller.determineMinspacestart());
       localMinSpaceStart = minSpaceStart;
     }
     if (askForNewTask) {
