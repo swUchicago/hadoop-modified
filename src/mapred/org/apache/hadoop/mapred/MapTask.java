@@ -1036,7 +1036,6 @@ class MapTask extends Task {
         boolean kvfull;
         do {
           if (sortSpillException != null) {
-            LOG.info("Task ID : " + getTaskId() + " is failed...");
             throw (IOException)new IOException("Spill failed"
                 ).initCause(sortSpillException);
           }
@@ -1221,7 +1220,6 @@ class MapTask extends Task {
         try {
           do {
             if (sortSpillException != null) {
-              LOG.info("Task ID : " + getTaskId() + " is failed...");
               throw (IOException)new IOException("Spill failed"
                   ).initCause(sortSpillException);
             }
@@ -1301,7 +1299,6 @@ class MapTask extends Task {
           spillDone.await();
         }
         if (sortSpillException != null) {
-          LOG.info("Task ID : " + getTaskId() + " is failed...");
           throw (IOException)new IOException("Spill failed"
               ).initCause(sortSpillException);
         }
@@ -1328,7 +1325,6 @@ class MapTask extends Task {
         spillThread.interrupt();
         spillThread.join();
       } catch (InterruptedException e) {
-        LOG.info("Task ID : " + getTaskId() + " is failed...");
         throw (IOException)new IOException("Spill failed"
             ).initCause(e);
       }
@@ -1362,6 +1358,7 @@ class MapTask extends Task {
               sortSpillException = t;
               String logMsg = "Task " + getTaskID() + " failed : " 
                               + StringUtils.stringifyException(t);
+              LOG.info("Task " + getTaskID() + " failed...");
               reportFatalError(getTaskID(), t, logMsg);
             } finally {
               spillLock.lock();
