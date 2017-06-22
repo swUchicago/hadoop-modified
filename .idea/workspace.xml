@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a59572e9-b4df-4a34-a552-19d0d67e73c5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/ant/.gitignore" afterPath="$PROJECT_DIR$/build/ant/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/FileInputFormat.java" afterPath="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/FileInputFormat.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/TaskTracker.java" afterPath="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/TaskTracker.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -52,8 +48,8 @@
       <file leaf-file-name="TaskTracker.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/TaskTracker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="1988" column="47" lean-forward="false" selection-start-line="1988" selection-start-column="47" selection-end-line="1988" selection-end-column="47" />
+            <state relative-caret-position="282">
+              <caret line="1988" column="19" lean-forward="false" selection-start-line="1988" selection-start-column="19" selection-end-line="1988" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -63,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="435">
-              <caret line="29" column="20" lean-forward="true" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+              <caret line="29" column="20" lean-forward="false" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -668,12 +664,12 @@
       <option name="presentableId" value="Default" />
       <updated>1498111639385</updated>
       <workItem from="1498111640749" duration="174000" />
-      <workItem from="1498124583726" duration="1223000" />
+      <workItem from="1498124583726" duration="1566000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1397000" />
+    <option name="totallyTimeSpent" value="1740000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="730" extended-state="6" />
@@ -791,7 +787,7 @@
     <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
-          <caret line="29" column="20" lean-forward="true" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+          <caret line="29" column="20" lean-forward="false" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -800,8 +796,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/TaskTracker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="1988" column="47" lean-forward="false" selection-start-line="1988" selection-start-column="47" selection-end-line="1988" selection-end-column="47" />
+        <state relative-caret-position="282">
+          <caret line="1988" column="19" lean-forward="false" selection-start-line="1988" selection-start-column="19" selection-end-line="1988" selection-end-column="19" />
           <folding />
         </state>
       </provider>

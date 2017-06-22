@@ -1986,7 +1986,7 @@ public class TaskTracker implements MRConstants, TaskUmbilicalProtocol,
         ((status.countOccupiedMapSlots() < maxMapSlots || 
           status.countOccupiedReduceSlots() < maxReduceSlots) && 
          acceptNewTasks);
-      System.out.println("Minspacestart = " + controller.determineMinspacestart());
+      LOG.info("Minspacestart = " + controller.determineMinspacestart());
       localMinSpaceStart = minSpaceStart;
     }
     if (askForNewTask) {
