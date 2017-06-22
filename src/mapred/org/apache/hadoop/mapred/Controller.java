@@ -8,12 +8,27 @@ import java.util.Map;
  */
 public class Controller {
 
-    public class Pair {
+    // Nested class
+    private class Pair {
         public String key;
         public int value;
     }
 
-    private ArrayList<Controller.Pair> exceptions;
+    // Attributes
+    private static Controller instance = new Controller();
+    private static ArrayList<Controller.Pair> exceptions;
+
+    private Controller() {
+        exceptions = new ArrayList<>();
+    }
+
+    public static Controller getInstance() {
+        return instance;
+    }
+
+    public void catchException() {
+
+    }
 
     private int maximumException() {
         int result = 0;

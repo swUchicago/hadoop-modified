@@ -123,7 +123,6 @@ import org.apache.hadoop.security.Credentials;
 public class TaskTracker implements MRConstants, TaskUmbilicalProtocol,
     Runnable, TaskTrackerMXBean {
 
-  static Controller controller = new Controller();
   /**
    * @deprecated
    */
@@ -1986,7 +1985,8 @@ public class TaskTracker implements MRConstants, TaskUmbilicalProtocol,
         ((status.countOccupiedMapSlots() < maxMapSlots || 
           status.countOccupiedReduceSlots() < maxReduceSlots) && 
          acceptNewTasks);
-      LOG.info("Minspacestart = " + controller.determineMinspacestart());
+      Controller controller = Controller.getInstance();
+//      LOG.info("Minspacestart = " + controller.determineMinspacestart());
       localMinSpaceStart = minSpaceStart;
     }
     if (askForNewTask) {

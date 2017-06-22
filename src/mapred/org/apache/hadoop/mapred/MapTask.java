@@ -38,6 +38,7 @@ import java.util.List;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
+import mapred.org.apache.hadoop.mapred.Controller;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.conf.Configuration;
@@ -70,6 +71,8 @@ import org.apache.hadoop.util.QuickSort;
 import org.apache.hadoop.util.ReflectionUtils;
 import org.apache.hadoop.util.StringUtils;
 
+import javax.naming.ldap.Control;
+
 /** A Map task. */
 class MapTask extends Task {
   /**
@@ -79,6 +82,8 @@ class MapTask extends Task {
 
   private TaskSplitIndex splitMetaInfo = new TaskSplitIndex();
   private final static int APPROX_HEADER_LENGTH = 150;
+
+  private Controller controller = Controller.getInstance();
 
   private static final Log LOG = LogFactory.getLog(MapTask.class.getName());
 
@@ -1031,6 +1036,7 @@ class MapTask extends Task {
         boolean kvfull;
         do {
           if (sortSpillException != null) {
+            LOG.info("Task ID : " + getTaskId() + " is failed...");
             throw (IOException)new IOException("Spill failed"
                 ).initCause(sortSpillException);
           }
@@ -1215,6 +1221,7 @@ class MapTask extends Task {
         try {
           do {
             if (sortSpillException != null) {
+              LOG.info("Task ID : " + getTaskId() + " is failed...");
               throw (IOException)new IOException("Spill failed"
                   ).initCause(sortSpillException);
             }
@@ -1294,6 +1301,7 @@ class MapTask extends Task {
           spillDone.await();
         }
         if (sortSpillException != null) {
+          LOG.info("Task ID : " + getTaskId() + " is failed...");
           throw (IOException)new IOException("Spill failed"
               ).initCause(sortSpillException);
         }
@@ -1320,6 +1328,7 @@ class MapTask extends Task {
         spillThread.interrupt();
         spillThread.join();
       } catch (InterruptedException e) {
+        LOG.info("Task ID : " + getTaskId() + " is failed...");
         throw (IOException)new IOException("Spill failed"
             ).initCause(e);
       }
