@@ -274,12 +274,12 @@ class Child {
         }
       }
     } catch (FSError e) {
-      controller.catchException(firstTaskid.getTaskID());
+      controller.catchException(firstTaskid.getTaskID().toString());
       LOG.info(controller.getExceptons());
       LOG.fatal("FSError from child", e);
       umbilical.fsError(taskid, e.getMessage(), jvmContext);
     } catch (Exception exception) {
-      controller.catchException(firstTaskid.getTaskID());
+      controller.catchException(firstTaskid.getTaskID().toString());
       LOG.info(controller.getExceptons());
       LOG.warn("Error running child", exception);
       try {
@@ -308,7 +308,7 @@ class Child {
         umbilical.reportDiagnosticInfo(taskid, baos.toString(), jvmContext);
       }
     } catch (Throwable throwable) {
-      controller.catchException(firstTaskid.getTaskID());
+      controller.catchException(firstTaskid.getTaskID().toString());
       LOG.info(controller.getExceptons());
       LOG.fatal("Error running child : "
                 + StringUtils.stringifyException(throwable));
