@@ -274,6 +274,7 @@ class Child {
       LOG.fatal("FSError from child", e);
       umbilical.fsError(taskid, e.getMessage(), jvmContext);
     } catch (Exception exception) {
+      LOG.info("Task " + firstTaskid.getTaskID() + " is failed...");
       LOG.warn("Error running child", exception);
       try {
         if (task != null) {
@@ -301,6 +302,7 @@ class Child {
         umbilical.reportDiagnosticInfo(taskid, baos.toString(), jvmContext);
       }
     } catch (Throwable throwable) {
+      LOG.info("Task " + firstTaskid.getTaskID() + " is failed...");
       LOG.fatal("Error running child : "
                 + StringUtils.stringifyException(throwable));
       if (taskid != null) {

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a59572e9-b4df-4a34-a552-19d0d67e73c5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/Child.java" afterPath="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/Child.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/MapTask.java" afterPath="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/MapTask.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,21 +56,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Child.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Child.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/Child.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="273" column="41" lean-forward="true" selection-start-line="273" selection-start-column="41" selection-end-line="273" selection-end-column="41" />
+            <state relative-caret-position="113">
+              <caret line="277" column="35" lean-forward="false" selection-start-line="277" selection-start-column="16" selection-end-line="277" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MapTask.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MapTask.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/MapTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="1303" column="60" lean-forward="true" selection-start-line="1303" selection-start-column="60" selection-end-line="1303" selection-end-column="60" />
+            <state relative-caret-position="143">
+              <caret line="1305" column="28" lean-forward="false" selection-start-line="1305" selection-start-column="28" selection-end-line="1305" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -134,8 +135,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>DiskE</find>
-      <find>DiskError</find>
       <find>DiskErrorE</find>
       <find>DiskErrorEx</find>
       <find>DiskErrorExc</find>
@@ -164,6 +163,8 @@
       <find>firstTaskID</find>
       <find>firstTaskid</find>
       <find>Log.info</find>
+      <find>Error running child</find>
+      <find>LOG.info(&quot;Task &quot; + getTaskID() + &quot; is failed...&quot;);</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src</dir>
@@ -182,9 +183,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/TaskTracker.java" />
         <option value="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/Controller.java" />
-        <option value="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/MapTask.java" />
         <option value="$PROJECT_DIR$/src/core/org/apache/hadoop/fs/LocalDirAllocator.java" />
         <option value="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/Child.java" />
+        <option value="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/MapTask.java" />
       </list>
     </option>
   </component>
@@ -728,12 +729,12 @@
       <option name="presentableId" value="Default" />
       <updated>1498111639385</updated>
       <workItem from="1498111640749" duration="174000" />
-      <workItem from="1498124583726" duration="8753000" />
+      <workItem from="1498124583726" duration="9600000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8927000" />
+    <option name="totallyTimeSpent" value="9774000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="730" extended-state="6" />
@@ -945,16 +946,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/MapTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="1303" column="60" lean-forward="true" selection-start-line="1303" selection-start-column="60" selection-end-line="1303" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/core/org/apache/hadoop/fs/LocalDirAllocator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
@@ -981,9 +972,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/Child.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="273" column="41" lean-forward="true" selection-start-line="273" selection-start-column="41" selection-end-line="273" selection-end-column="41" />
+        <state relative-caret-position="113">
+          <caret line="277" column="35" lean-forward="false" selection-start-line="277" selection-start-column="16" selection-end-line="277" selection-end-column="35" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/MapTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="1305" column="28" lean-forward="false" selection-start-line="1305" selection-start-column="28" selection-end-line="1305" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
