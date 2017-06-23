@@ -270,6 +270,7 @@ class Child {
         }
       }
     } catch (FSError e) {
+      LOG.info("Task " + firstTaskid.getTaskID() + " is failed...");
       LOG.fatal("FSError from child", e);
       umbilical.fsError(taskid, e.getMessage(), jvmContext);
     } catch (Exception exception) {
