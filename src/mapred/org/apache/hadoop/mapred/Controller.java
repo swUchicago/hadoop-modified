@@ -12,6 +12,10 @@ public class Controller {
     private class Pair {
         public String key;
         public int value;
+        public Pair(String key, int value) {
+            this.key = key;
+            this.value = value;
+        }
     }
 
     // Attributes
@@ -26,8 +30,17 @@ public class Controller {
         return instance;
     }
 
-    public void catchException() {
+    public void catchException(String taskId) {
+        Pair pair = new Pair(taskId, 1);
+        exceptions.add(pair);
+    }
 
+    public String getExceptons() {
+        String result = "";
+        for (int i=0; i<exceptions.size(); i++) {
+            result = result + exceptions.get(i).key + "[" + exceptions.get(i).value + "]" + ", ";
+        }
+        return result;
     }
 
     private int maximumException() {

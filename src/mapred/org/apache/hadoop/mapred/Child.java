@@ -25,6 +25,8 @@ import java.io.PrintStream;
 import java.net.InetSocketAddress;
 import java.security.PrivilegedExceptionAction;
 import java.util.Arrays;
+
+import mapred.org.apache.hadoop.mapred.Controller;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.fs.FSError;
@@ -164,6 +166,8 @@ class Child {
     UserGroupInformation childUGI = null;
 
     final JvmContext jvmContext = context;
+
+    Controller controller = Controller.getInstance();
     try {
       while (true) {
         taskid = null;
@@ -270,11 +274,13 @@ class Child {
         }
       }
     } catch (FSError e) {
-      LOG.info("Task " + firstTaskid.getTaskID() + " is failed...");
+      controller.catchException(firstTaskid.getTaskID());
+      LOG.info(controller.getExceptons());
       LOG.fatal("FSError from child", e);
       umbilical.fsError(taskid, e.getMessage(), jvmContext);
     } catch (Exception exception) {
-      LOG.info("Task " + firstTaskid.getTaskID() + " is failed...");
+      controller.catchException(firstTaskid.getTaskID());
+      LOG.info(controller.getExceptons());
       LOG.warn("Error running child", exception);
       try {
         if (task != null) {
@@ -302,7 +308,8 @@ class Child {
         umbilical.reportDiagnosticInfo(taskid, baos.toString(), jvmContext);
       }
     } catch (Throwable throwable) {
-      LOG.info("Task " + firstTaskid.getTaskID() + " is failed...");
+      controller.catchException(firstTaskid.getTaskID());
+      LOG.info(controller.getExceptons());
       LOG.fatal("Error running child : "
                 + StringUtils.stringifyException(throwable));
       if (taskid != null) {
