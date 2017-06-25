@@ -52,6 +52,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import mapred.org.apache.hadoop.mapred.Controller;
+import mapred.org.apache.hadoop.mapred.controller.Sensor;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.conf.Configuration;
@@ -3000,9 +3001,9 @@ public class JobTracker implements MRConstants, InterTrackerProtocol,
     // Initialize the response to be sent for the heartbeat
     HeartbeatResponse response = new HeartbeatResponse(newResponseId, null);
 
-    // Setup the controller to send the currentMaxException through heartbeat
-//    Controller controller = Controller.getInstance();
-
+    // Setup Sensor to send the currentMaxException through heartbeat
+    Sensor sensor = Sensor.getInstance();
+    response.setCurrentMaxExceptions(sensor.getMaxExceptions());
 
     List<TaskTrackerAction> actions = new ArrayList<TaskTrackerAction>();
     boolean isBlacklisted = faultyTrackers.isBlacklisted(status.getHost());

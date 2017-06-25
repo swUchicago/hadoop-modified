@@ -61,7 +61,7 @@ public class Sensor {
         return result;
     }
 
-    public int getMaxExceptions() {
+    public synchronized int getMaxExceptions() {
         int result = 0;
         for (int i=0; i < exceptions.size(); i++) {
             if (exceptions.get(i).value > result) {

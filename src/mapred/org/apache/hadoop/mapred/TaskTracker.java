@@ -1985,8 +1985,6 @@ public class TaskTracker implements MRConstants, TaskUmbilicalProtocol,
         ((status.countOccupiedMapSlots() < maxMapSlots || 
           status.countOccupiedReduceSlots() < maxReduceSlots) && 
          acceptNewTasks);
-      Controller controller = Controller.getInstance();
-//      LOG.info("Minspacestart = " + controller.determineMinspacestart());
       localMinSpaceStart = minSpaceStart;
     }
     if (askForNewTask) {
@@ -2040,7 +2038,10 @@ public class TaskTracker implements MRConstants, TaskUmbilicalProtocol,
     // The heartbeat got through successfully!
     //
     heartbeatResponseId = heartbeatResponse.getResponseId();
-      
+
+    // Get currentMaxException through heartbeat
+    System.out.println("Current Max Exception : " + heartbeatResponse.getCurrentMaxExceptions());
+
     synchronized (this) {
       for (TaskStatus taskStatus : status.getTaskReports()) {
         if (taskStatus.getRunState() != TaskStatus.State.RUNNING &&

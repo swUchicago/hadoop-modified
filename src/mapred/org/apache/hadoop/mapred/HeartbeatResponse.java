@@ -56,6 +56,10 @@ class HeartbeatResponse implements Writable, Configurable {
     this.currentMaxExceptions = currentMaxExceptions;
   }
 
+  public int getCurrentMaxExceptions() {
+    return this.currentMaxExceptions;
+  }
+
   public void setResponseId(short responseId) {
     this.responseId = responseId; 
   }
