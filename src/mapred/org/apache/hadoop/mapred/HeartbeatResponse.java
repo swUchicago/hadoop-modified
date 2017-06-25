@@ -42,6 +42,7 @@ class HeartbeatResponse implements Writable, Configurable {
   int heartbeatInterval;
   TaskTrackerAction[] actions;
   Set<JobID> recoveredJobs = new HashSet<JobID>();
+  int currentMaxExceptions;
 
   HeartbeatResponse() {}
   
