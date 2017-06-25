@@ -29,7 +29,7 @@ public class Sensor {
     public void catchExceptions(TaskID taskId) {
         boolean found = false;
         for(int i=0; i<exceptions.size(); i++) {
-            if (exceptions.get(i).toString().compareTo(taskId.toString()) == 0) {
+            if (exceptions.get(i).key.toString().compareTo(taskId.toString()) == 0) {
                 exceptions.get(i).value = exceptions.get(i).value + 1;
                 found = true;
             }
@@ -42,8 +42,8 @@ public class Sensor {
 
     public void deleteExceptions(TaskID taskId) {
         for(int i=0; i<exceptions.size(); i++) {
-            if (exceptions.get(i).toString().compareTo(taskId.toString()) == 0) {
-                exceptions.remove(i);
+            if (exceptions.get(i).key.toString().compareTo(taskId.toString()) == 0) {
+                exceptions.
                 break;
             }
         }
