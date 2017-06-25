@@ -103,6 +103,7 @@ class HeartbeatResponse implements Writable, Configurable {
   public void write(DataOutput out) throws IOException {
     out.writeShort(responseId);
     out.writeInt(heartbeatInterval);
+    out.writeInt(currentMaxExceptions);
     if (actions == null) {
       WritableUtils.writeVInt(out, 0);
     } else {
@@ -122,6 +123,7 @@ class HeartbeatResponse implements Writable, Configurable {
   public void readFields(DataInput in) throws IOException {
     this.responseId = in.readShort();
     this.heartbeatInterval = in.readInt();
+    this.currentMaxExceptions = in.readInt();
     int length = WritableUtils.readVInt(in);
     if (length > 0) {
       actions = new TaskTrackerAction[length];
