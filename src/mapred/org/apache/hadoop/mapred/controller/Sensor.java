@@ -22,6 +22,10 @@ public class Sensor {
     private static Sensor instance = new Sensor();
     private static ArrayList<Pair> exceptions;
 
+    private Sensor() {
+        exceptions = new ArrayList<Pair>();
+    }
+
     public static Sensor getInstance() {
         return instance;
     }
