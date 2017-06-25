@@ -51,7 +51,11 @@ class HeartbeatResponse implements Writable, Configurable {
     this.actions = actions;
     this.heartbeatInterval = MRConstants.HEARTBEAT_INTERVAL_MIN;
   }
-  
+
+  public void setCurrentMaxExceptions(int currentMaxExceptions) {
+    this.currentMaxExceptions = currentMaxExceptions;
+  }
+
   public void setResponseId(short responseId) {
     this.responseId = responseId; 
   }

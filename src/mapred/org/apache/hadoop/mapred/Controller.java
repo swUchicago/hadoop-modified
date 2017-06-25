@@ -30,7 +30,7 @@ public class Controller {
         return instance;
     }
 
-    public void catchException(String taskId) {
+    public void catchException(TaskAttemptID taskId) {
         Pair pair = new Pair(taskId, 1);
         exceptions.add(pair);
     }

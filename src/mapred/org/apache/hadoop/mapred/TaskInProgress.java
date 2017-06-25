@@ -29,7 +29,9 @@ import java.util.TreeMap;
 import java.util.TreeSet;
 import java.util.concurrent.ConcurrentHashMap;
 
+import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
 import mapred.org.apache.hadoop.mapred.Controller;
+import mapred.org.apache.hadoop.mapred.controller.Sensor;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.mapred.SortedRanges.Range;
@@ -716,15 +718,15 @@ class TaskInProgress {
       resetSuccessfulTaskid();
     }
 
-    Controller controller = Controller.getInstance();
+    Sensor sensor = Sensor.getInstance();
 
     // Note that there can be failures of tasks that are hosted on a machine 
     // that has not yet registered with restarted jobtracker
     // recalculate the counts only if its a genuine failure
     if (tasks.contains(taskid)) {
       if (taskState == TaskStatus.State.FAILED) {
-        controller.catchException(taskid.toString());
-        LOG.info("*** " + controller.getExceptons() + " *** ");
+        sensor.catchExceptions(taskid.getTaskID());
+        LOG.info("*** " + sensor.stringifyExceptions() + " *** ");
         numTaskFailures++;
         machinesWhereFailed.add(trackerHostName);
         if(maxSkipRecords>0) {

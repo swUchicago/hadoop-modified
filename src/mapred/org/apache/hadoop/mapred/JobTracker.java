@@ -3000,8 +3000,9 @@ public class JobTracker implements MRConstants, InterTrackerProtocol,
     // Initialize the response to be sent for the heartbeat
     HeartbeatResponse response = new HeartbeatResponse(newResponseId, null);
 
-    Controller controller = Controller.getInstance();
-    LOG.info("Controller : " + controller.getExceptons());
+    // Setup the controller to send the currentMaxException through heartbeat
+//    Controller controller = Controller.getInstance();
+
 
     List<TaskTrackerAction> actions = new ArrayList<TaskTrackerAction>();
     boolean isBlacklisted = faultyTrackers.isBlacklisted(status.getHost());

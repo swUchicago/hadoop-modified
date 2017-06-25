@@ -38,6 +38,7 @@ import java.util.TreeSet;
 import java.util.Vector;
 import java.net.UnknownHostException;
 
+import mapred.org.apache.hadoop.mapred.controller.Sensor;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.fs.FileStatus;
@@ -2612,6 +2613,9 @@ public class JobInProgress {
       }
       return false;
     } 
+
+    Sensor sensor = Sensor.getInstance();
+    sensor.deleteExceptions(taskid.getTaskID());
 
     LOG.info("Task '" + taskid + "' has completed " + tip.getTIPId() + 
              " successfully.");          
