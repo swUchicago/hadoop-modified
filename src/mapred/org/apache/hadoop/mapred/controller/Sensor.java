@@ -43,7 +43,7 @@ public class Sensor {
     public void deleteExceptions(TaskID taskId) {
         for(int i=0; i<exceptions.size(); i++) {
             if (exceptions.get(i).key.toString().compareTo(taskId.toString()) == 0) {
-                exceptions.
+                exceptions.remove(i);
                 break;
             }
         }
