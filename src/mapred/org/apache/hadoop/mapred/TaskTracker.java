@@ -1981,8 +1981,9 @@ public class TaskTracker implements MRConstants, TaskUmbilicalProtocol,
 
     // Initialize controller and other variables to control minspacestart
     Controller controller = Controller.getInstance();
-    int mapParallelism = 2;
+    int mapParallelism = maxMapSlots;
     long intermediateFileSize = 136314880;
+
     controller.setTarget(2); // Max current exception is 2
     //
     // Check if we should ask for a new Task
@@ -1994,7 +1995,7 @@ public class TaskTracker implements MRConstants, TaskUmbilicalProtocol,
         ((status.countOccupiedMapSlots() < maxMapSlots || 
           status.countOccupiedReduceSlots() < maxReduceSlots) && 
          acceptNewTasks);
-      minSpaceStart = controller.calculateMinspacestart(currentMaxException, 2, 136314880);
+      minSpaceStart = controller.calculateMinspacestart(currentMaxException, mapParallelism, intermediateFileSize);
       System.out.println("CurrentMaxEx: " + currentMaxException + ", Minspacestart : " + minSpaceStart);
       localMinSpaceStart = minSpaceStart;
     }

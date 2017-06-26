@@ -724,7 +724,6 @@ class TaskInProgress {
     if (tasks.contains(taskid)) {
       if (taskState == TaskStatus.State.FAILED) {
         sensor.catchExceptions(taskid.getTaskID());
-        LOG.info("*** " + sensor.stringifyExceptions() + " *** ");
         numTaskFailures++;
         machinesWhereFailed.add(trackerHostName);
         if(maxSkipRecords>0) {

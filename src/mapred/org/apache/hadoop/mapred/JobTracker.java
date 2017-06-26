@@ -3002,6 +3002,7 @@ public class JobTracker implements MRConstants, InterTrackerProtocol,
     Sensor sensor = Sensor.getInstance();
     response.setCurrentMaxExceptions(sensor.getMaxExceptions());
 
+
     List<TaskTrackerAction> actions = new ArrayList<TaskTrackerAction>();
     boolean isBlacklisted = faultyTrackers.isBlacklisted(status.getHost());
     // Check for new tasks to be executed on the tasktracker
