@@ -1983,7 +1983,7 @@ public class TaskTracker implements MRConstants, TaskUmbilicalProtocol,
     Controller controller = Controller.getInstance();
     int mapParallelism = 2;
     long intermediateFileSize = 136314880;
-
+    controller.setTarget(2); // Max current exception is 2
     //
     // Check if we should ask for a new Task
     //
