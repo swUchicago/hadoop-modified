@@ -29,8 +29,6 @@ import java.util.TreeMap;
 import java.util.TreeSet;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
-import mapred.org.apache.hadoop.mapred.Controller;
 import mapred.org.apache.hadoop.mapred.controller.Sensor;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

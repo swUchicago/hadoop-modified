@@ -56,7 +56,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import mapred.org.apache.hadoop.mapred.Controller;
+import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
+import mapred.org.apache.hadoop.mapred.controller.Controller;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.conf.Configuration;
@@ -148,6 +149,9 @@ public class TaskTracker implements MRConstants, TaskUmbilicalProtocol,
     Configuration.addDefaultResource("mapred-default.xml");
     Configuration.addDefaultResource("mapred-site.xml");
   }
+
+  // For being used by controller
+  static int currentMaxException;
 
   public static final Log LOG =
     LogFactory.getLog(TaskTracker.class);
@@ -1974,7 +1978,12 @@ public class TaskTracker implements MRConstants, TaskUmbilicalProtocol,
       LOG.info("Resending 'status' to '" + jobTrackAddr.getHostName() +
                "' with reponseId '" + heartbeatResponseId);
     }
-      
+
+    // Initialize controller and other variables to control minspacestart
+    Controller controller = Controller.getInstance();
+    int mapParallelism = 2;
+    long intermediateFileSize = 136314880;
+
     //
     // Check if we should ask for a new Task
     //
@@ -1985,6 +1994,8 @@ public class TaskTracker implements MRConstants, TaskUmbilicalProtocol,
         ((status.countOccupiedMapSlots() < maxMapSlots || 
           status.countOccupiedReduceSlots() < maxReduceSlots) && 
          acceptNewTasks);
+      minSpaceStart = controller.calculateMinspacestart(currentMaxException, 2, 136314880);
+      System.out.println("CurrentMaxEx: " + currentMaxException + ", Minspacestart : " + minSpaceStart);
       localMinSpaceStart = minSpaceStart;
     }
     if (askForNewTask) {
@@ -2040,7 +2051,7 @@ public class TaskTracker implements MRConstants, TaskUmbilicalProtocol,
     heartbeatResponseId = heartbeatResponse.getResponseId();
 
     // Get currentMaxException through heartbeat
-    System.out.println("Current Max Exception : " + heartbeatResponse.getCurrentMaxExceptions());
+    currentMaxException = heartbeatResponse.getCurrentMaxExceptions();
 
     synchronized (this) {
       for (TaskStatus taskStatus : status.getTaskReports()) {
