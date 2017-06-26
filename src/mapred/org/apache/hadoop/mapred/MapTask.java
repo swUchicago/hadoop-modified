@@ -80,8 +80,6 @@ class MapTask extends Task {
   private TaskSplitIndex splitMetaInfo = new TaskSplitIndex();
   private final static int APPROX_HEADER_LENGTH = 150;
 
-  private Controller controller = Controller.getInstance();
-
   private static final Log LOG = LogFactory.getLog(MapTask.class.getName());
 
   {   // set phase for this task
