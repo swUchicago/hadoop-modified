@@ -7,7 +7,7 @@ public class Controller {
 
     // Attributes
     private static Controller instance = new Controller();
-    public static final int DEFAULT_TARGET = 4; // exception should <= 2
+    public static final int DEFAULT_TARGET = 2;
     private int target;
 
     private Controller() {
@@ -16,10 +16,6 @@ public class Controller {
 
     public static Controller getInstance() {
         return instance;
-    }
-
-    public void setTarget(int target) {
-        this.target = target;
     }
 
     public long calculateMinspacestart(int currentMaxExceptions, int mapParallelism, long intermediateFileSize) {

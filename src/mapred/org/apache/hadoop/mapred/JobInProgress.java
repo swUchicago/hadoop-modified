@@ -2616,13 +2616,15 @@ public class JobInProgress {
 
     // Sensor catches exception and intermediate file size after a task is finished
     Sensor sensor = Sensor.getInstance();
+    LOG.info("Current list : " + sensor.stringifyExceptions());
     sensor.deleteExceptions(taskid.getTaskID());
     long outputBytes = tip.getTaskStatus(taskid).getCounters().findCounter("org.apache.hadoop.mapred.Task$Counter", "MAP_OUTPUT_BYTES").getValue();
     long bytesWritten = tip.getTaskStatus(taskid).getCounters().findCounter("FileSystemCounters", "FILE_BYTES_WRITTEN").getValue();
     sensor.setMapOutputSize(outputBytes);
     sensor.setBytesWritten(bytesWritten);
-//    LOG.info("Deleting task " + taskid.getTaskID().toString() + " from list...");
-//    LOG.info("Current list : " + sensor.stringifyExceptions());
+
+    LOG.info("Deleting task " + taskid.getTaskID().toString() + " from list...");
+    LOG.info("Current list : " + sensor.stringifyExceptions());
 
     LOG.info("Task '" + taskid + "' has completed " + tip.getTIPId() + 
              " successfully.");          

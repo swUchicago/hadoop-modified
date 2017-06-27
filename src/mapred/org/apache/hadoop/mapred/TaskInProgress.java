@@ -731,6 +731,8 @@ class TaskInProgress {
         sensor.setMapOutputSize(outputBytes);
         sensor.setBytesWritten(bytesWritten);
 
+        LOG.info("*** " + sensor.stringifyExceptions());
+
         numTaskFailures++;
         machinesWhereFailed.add(trackerHostName);
         if(maxSkipRecords>0) {
