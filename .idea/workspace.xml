@@ -38,7 +38,7 @@
       <file leaf-file-name="TaskInProgress.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/TaskInProgress.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
+            <state relative-caret-position="265">
               <caret line="729" column="49" lean-forward="true" selection-start-line="729" selection-start-column="49" selection-end-line="729" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -118,7 +118,6 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Total committed heap usage (bytes)</find>
-      <find>Total committed heap usage (bytes)</find>
       <find>mapred.tasktracker.map.tasks.maximum</find>
       <find>m</find>
       <find>map</find>
@@ -132,7 +131,6 @@
       <find>minspacestart</find>
       <find>getTaskStatus</find>
       <find>hearbeat</find>
-      <find>sensor</find>
       <find>map</find>
       <find>output</find>
       <find>map output byte</find>
@@ -147,6 +145,8 @@
       <find>TaskStatus</find>
       <find>Sensor</find>
       <find>SEnsor</find>
+      <find>taskStatus</find>
+      <find>sensor</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/mapred</dir>
@@ -729,12 +729,12 @@
       <workItem from="1498111640749" duration="174000" />
       <workItem from="1498124583726" duration="15686000" />
       <workItem from="1498371643057" duration="9320000" />
-      <workItem from="1498462376712" duration="6012000" />
+      <workItem from="1498462376712" duration="6316000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31192000" />
+    <option name="totallyTimeSpent" value="31496000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="730" extended-state="6" />
@@ -1373,7 +1373,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/TaskInProgress.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
+        <state relative-caret-position="265">
           <caret line="729" column="49" lean-forward="true" selection-start-line="729" selection-start-column="49" selection-end-line="729" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
