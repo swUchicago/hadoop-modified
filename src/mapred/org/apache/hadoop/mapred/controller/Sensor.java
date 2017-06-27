@@ -21,9 +21,14 @@ public class Sensor {
     // Attributes
     private static Sensor instance = new Sensor();
     private static ArrayList<Pair> exceptions;
+    private static long mapOutputSize;
+    private static long bytesWritten;
 
+    // Constructor
     private Sensor() {
         exceptions = new ArrayList<Pair>();
+        mapOutputSize = 0;
+        bytesWritten = 0;
     }
 
     public static Sensor getInstance() {
@@ -50,6 +55,18 @@ public class Sensor {
                 exceptions.remove(i);
                 break;
             }
+        }
+    }
+
+    public synchronized void setMapOutputSize(long mapOutputSize) {
+        if (this.mapOutputSize < mapOutputSize) {
+            this.mapOutputSize = mapOutputSize;
+        }
+    }
+
+    public synchronized void setBytesWritten(long bytesWritten) {
+        if (this.bytesWritten < bytesWritten) {
+            this.bytesWritten = bytesWritten;
         }
     }
 
