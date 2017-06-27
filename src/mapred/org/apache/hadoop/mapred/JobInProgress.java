@@ -2616,9 +2616,11 @@ public class JobInProgress {
 
     Sensor sensor = Sensor.getInstance();
     sensor.deleteExceptions(taskid.getTaskID());
+    long outputBytes = tip.getTaskStatus(taskid).getCounters().findCounter("org.apache.hadoop.mapred.Task$Counter", "MAP_OUTPUT_BYTES").getValue();
+    System.out.println("Map output bytes from finished task : " + outputBytes);
+//    LOG.info("Deleting task " + taskid.getTaskID().toString() + " from list...");
+//    LOG.info("Current list : " + sensor.stringifyExceptions());
 
-    LOG.info("Deleting task " + taskid.getTaskID().toString() + " from list...");
-    LOG.info("Current list : " + sensor.stringifyExceptions());
 
     LOG.info("Task '" + taskid + "' has completed " + tip.getTIPId() + 
              " successfully.");          

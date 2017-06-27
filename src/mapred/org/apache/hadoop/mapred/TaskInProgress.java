@@ -723,10 +723,13 @@ class TaskInProgress {
     // recalculate the counts only if its a genuine failure
     if (tasks.contains(taskid)) {
       if (taskState == TaskStatus.State.FAILED) {
+
+        // Sensor catches exceptions and intermediate file size
         sensor.catchExceptions(taskid.getTaskID());
-        numTaskFailures++;
         long outputBytes = getTaskStatus(taskid).getCounters().findCounter("org.apache.hadoop.mapred.Task$Counter", "MAP_OUTPUT_BYTES").getValue();
-        System.out.println("Map Output bytes : " + outputBytes);
+        sensor.setMapOutputSize(outputBytes);
+
+        numTaskFailures++;
         machinesWhereFailed.add(trackerHostName);
         if(maxSkipRecords>0) {
           //skipping feature enabled
