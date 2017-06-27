@@ -61,7 +61,7 @@ class HeartbeatResponse implements Writable, Configurable {
     return this.currentMaxExceptions;
   }
 
-  public void setIntermediateFileSize(int intermediateFileSize) {
+  public void setIntermediateFileSize(long intermediateFileSize) {
     this.intermediateFileSize = intermediateFileSize;
   }
 
@@ -135,7 +135,7 @@ class HeartbeatResponse implements Writable, Configurable {
     this.heartbeatInterval = in.readInt();
     this.currentMaxExceptions = in.readInt();
     this.intermediateFileSize = in.readLong();
-    
+
     int length = WritableUtils.readVInt(in);
     if (length > 0) {
       actions = new TaskTrackerAction[length];
