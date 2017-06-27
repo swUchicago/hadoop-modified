@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a59572e9-b4df-4a34-a552-19d0d67e73c5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/TaskInProgress.java" afterPath="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/TaskInProgress.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/Sensor.java" afterPath="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/Sensor.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,8 +38,8 @@
       <file leaf-file-name="TaskInProgress.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/TaskInProgress.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="728" column="64" lean-forward="false" selection-start-line="728" selection-start-column="64" selection-end-line="728" selection-end-column="64" />
+            <state relative-caret-position="303">
+              <caret line="727" column="37" lean-forward="false" selection-start-line="727" selection-start-column="37" selection-end-line="727" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -729,12 +728,12 @@
       <workItem from="1498111640749" duration="174000" />
       <workItem from="1498124583726" duration="15686000" />
       <workItem from="1498371643057" duration="9320000" />
-      <workItem from="1498462376712" duration="5772000" />
+      <workItem from="1498462376712" duration="5830000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30952000" />
+    <option name="totallyTimeSpent" value="31010000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="730" extended-state="6" />
@@ -1373,8 +1372,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/TaskInProgress.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="728" column="64" lean-forward="false" selection-start-line="728" selection-start-column="64" selection-end-line="728" selection-end-column="64" />
+        <state relative-caret-position="303">
+          <caret line="727" column="37" lean-forward="false" selection-start-line="727" selection-start-column="37" selection-end-line="727" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
