@@ -2616,7 +2616,6 @@ public class JobInProgress {
 
     Sensor sensor = Sensor.getInstance();
     sensor.deleteExceptions(taskid.getTaskID());
-    System.out.println("Map output : " + tip.getTaskStatus(taskid).getOutputSize());
 
     LOG.info("Deleting task " + taskid.getTaskID().toString() + " from list...");
     LOG.info("Current list : " + sensor.stringifyExceptions());
