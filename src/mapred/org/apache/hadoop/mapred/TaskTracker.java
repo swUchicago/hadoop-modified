@@ -152,6 +152,7 @@ public class TaskTracker implements MRConstants, TaskUmbilicalProtocol,
 
   // For being used by controller
   static int currentMaxException;
+  static long intermediateFileSize;
 
   public static final Log LOG =
     LogFactory.getLog(TaskTracker.class);
@@ -1982,7 +1983,6 @@ public class TaskTracker implements MRConstants, TaskUmbilicalProtocol,
     // Initialize controller and other variables to control minspacestart
     Controller controller = Controller.getInstance();
     int mapParallelism = maxMapSlots;
-    long intermediateFileSize = 136314880;
 
     controller.setTarget(2); // Max current exception is 2
     //
@@ -2051,8 +2051,9 @@ public class TaskTracker implements MRConstants, TaskUmbilicalProtocol,
     //
     heartbeatResponseId = heartbeatResponse.getResponseId();
 
-    // Get currentMaxException through heartbeat
+    // Get currentMaxException and intermediate file size through heartbeat
     currentMaxException = heartbeatResponse.getCurrentMaxExceptions();
+    intermediateFileSize = heartbeatResponse.getIntermediateFileSize();
 
     synchronized (this) {
       for (TaskStatus taskStatus : status.getTaskReports()) {

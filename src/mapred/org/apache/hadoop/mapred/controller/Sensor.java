@@ -88,4 +88,14 @@ public class Sensor {
         return result;
     }
 
+    public synchronized long getIntermediateFileSize() {
+        long result;
+        if (mapOutputSize > bytesWritten) {
+            result = mapOutputSize;
+        } else {
+            result = bytesWritten;
+        }
+        return result;
+    }
+
 }

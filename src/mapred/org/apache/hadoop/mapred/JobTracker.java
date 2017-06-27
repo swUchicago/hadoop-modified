@@ -3001,7 +3001,7 @@ public class JobTracker implements MRConstants, InterTrackerProtocol,
     // Setup Sensor to send the currentMaxException through heartbeat
     Sensor sensor = Sensor.getInstance();
     response.setCurrentMaxExceptions(sensor.getMaxExceptions());
-
+    response.setIntermediateFileSize(sensor.getIntermediateFileSize());
 
     List<TaskTrackerAction> actions = new ArrayList<TaskTrackerAction>();
     boolean isBlacklisted = faultyTrackers.isBlacklisted(status.getHost());

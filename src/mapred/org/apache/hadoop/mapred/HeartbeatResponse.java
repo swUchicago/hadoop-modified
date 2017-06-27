@@ -43,6 +43,7 @@ class HeartbeatResponse implements Writable, Configurable {
   TaskTrackerAction[] actions;
   Set<JobID> recoveredJobs = new HashSet<JobID>();
   int currentMaxExceptions;
+  long intermediateFileSize;
 
   HeartbeatResponse() {}
   
@@ -58,6 +59,14 @@ class HeartbeatResponse implements Writable, Configurable {
 
   public int getCurrentMaxExceptions() {
     return this.currentMaxExceptions;
+  }
+
+  public void setIntermediateFileSize(int intermediateFileSize) {
+    this.intermediateFileSize = intermediateFileSize;
+  }
+
+  public long getIntermediateFileSize() {
+    return this.intermediateFileSize;
   }
 
   public void setResponseId(short responseId) {
@@ -104,6 +113,7 @@ class HeartbeatResponse implements Writable, Configurable {
     out.writeShort(responseId);
     out.writeInt(heartbeatInterval);
     out.writeInt(currentMaxExceptions);
+    out.writeLong(intermediateFileSize);
     if (actions == null) {
       WritableUtils.writeVInt(out, 0);
     } else {
@@ -124,6 +134,8 @@ class HeartbeatResponse implements Writable, Configurable {
     this.responseId = in.readShort();
     this.heartbeatInterval = in.readInt();
     this.currentMaxExceptions = in.readInt();
+    this.intermediateFileSize = in.readLong();
+    
     int length = WritableUtils.readVInt(in);
     if (length > 0) {
       actions = new TaskTrackerAction[length];
