@@ -1990,17 +1990,17 @@ public class TaskTracker implements MRConstants, TaskUmbilicalProtocol,
     boolean askForNewTask;
     long localMinSpaceStart;
     synchronized (this) {
-//      long intermediateFileSize = jobClient.getIntermediateFileSize();
-//      long intermediateFileSize = 178257920;
-//      int currentMaxException = jobClient.getCurrentMaxException();
+      long intermediateFileSize = jobClient.getIntermediateFileSize();
+      int currentMaxException = jobClient.getCurrentMaxException();
 
       askForNewTask =
         ((status.countOccupiedMapSlots() < maxMapSlots || 
           status.countOccupiedReduceSlots() < maxReduceSlots) && 
          acceptNewTasks);
+      localMinSpaceStart = controller.calculateMinspacestart(currentMaxException, mapParallelism, intermediateFileSize);
     }
     if (askForNewTask) {
-//      askForNewTask = enoughFreeSpace(localMinSpaceStart);
+      askForNewTask = enoughFreeSpace(localMinSpaceStart);
       long freeDiskSpace = getFreeSpace();
       long totVmem = getTotalVirtualMemoryOnTT();
       long totPmem = getTotalPhysicalMemoryOnTT();

@@ -3010,17 +3010,17 @@ public class JobTracker implements MRConstants, InterTrackerProtocol,
     List<TaskTrackerAction> actions = new ArrayList<TaskTrackerAction>();
     boolean isBlacklisted = faultyTrackers.isBlacklisted(status.getHost());
 
-    Controller controller = Controller.getInstance();
+//    Controller controller = Controller.getInstance();
 //    try {
 //      Thread.sleep(1000);
 //    } catch (InterruptedException e) {
 //      e.printStackTrace();
 //    }
-    long minspacestart = controller.calculateMinspacestart(sensor.getMaxExceptions(), mapParallelism, sensor.getIntermediateFileSize());
-    boolean newTask = acceptNewTasks && (freeSpace >= minspacestart);
+//    long minspacestart = controller.calculateMinspacestart(sensor.getMaxExceptions(), mapParallelism, sensor.getIntermediateFileSize());
+//    boolean newTask = acceptNewTasks && (freeSpace >= minspacestart);
 
     // Check for new tasks to be executed on the tasktracker
-    if (recoveryManager.shouldSchedule() && newTask && !isBlacklisted) {
+    if (recoveryManager.shouldSchedule() && acceptNewTasks && !isBlacklisted) {
       TaskTrackerStatus taskTrackerStatus = getTaskTrackerStatus(trackerName);
       if (taskTrackerStatus == null) {
         LOG.warn("Unknown task tracker polling; ignoring: " + trackerName);
@@ -3036,7 +3036,7 @@ public class JobTracker implements MRConstants, InterTrackerProtocol,
               LOG.debug(trackerName + " -> LaunchTask: " + task.getTaskID());
             }
             actions.add(new LaunchTaskAction(task));
-            System.out.println("Tracker name : " + trackerName + " assigned with " +  task.getTaskID() + ", free space : " + freeSpace + ", minspacestart : " + minspacestart);
+            System.out.println("Tracker name : " + trackerName + " assigned with " +  task.getTaskID() + ", free space : " + freeSpace);
           }
         }
       }
