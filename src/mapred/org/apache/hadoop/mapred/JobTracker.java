@@ -3028,7 +3028,6 @@ public class JobTracker implements MRConstants, InterTrackerProtocol,
         List<Task> tasks = getSetupAndCleanupTasks(taskTrackerStatus);
         if (tasks == null ) {
           tasks = taskScheduler.assignTasks(taskTrackers.get(trackerName));
-          System.out.println("Tracker name : " + trackerName + " assigned, free space : " + freeSpace + ", minspacestart : " + minspacestart);
         }
         if (tasks != null) {
           for (Task task : tasks) {
@@ -3037,6 +3036,7 @@ public class JobTracker implements MRConstants, InterTrackerProtocol,
               LOG.debug(trackerName + " -> LaunchTask: " + task.getTaskID());
             }
             actions.add(new LaunchTaskAction(task));
+            System.out.println("Tracker name : " + trackerName + " assigned, free space : " + freeSpace + ", minspacestart : " + minspacestart);
           }
         }
       }
