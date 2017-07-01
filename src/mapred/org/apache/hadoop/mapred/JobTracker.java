@@ -51,6 +51,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
 import mapred.org.apache.hadoop.mapred.controller.Controller;
 import mapred.org.apache.hadoop.mapred.controller.Sensor;
 import org.apache.commons.logging.Log;
@@ -3010,12 +3011,13 @@ public class JobTracker implements MRConstants, InterTrackerProtocol,
     boolean isBlacklisted = faultyTrackers.isBlacklisted(status.getHost());
 
     Controller controller = Controller.getInstance();
-    try {
-      Thread.sleep(1000);
-    } catch (InterruptedException e) {
-      e.printStackTrace();
-    }
-    boolean newTask = acceptNewTasks && (freeSpace >= controller.calculateMinspacestart(sensor.getMaxExceptions(), mapParallelism, sensor.getIntermediateFileSize()));
+//    try {
+//      Thread.sleep(1000);
+//    } catch (InterruptedException e) {
+//      e.printStackTrace();
+//    }
+    long minspacestart = controller.calculateMinspacestart(sensor.getMaxExceptions(), mapParallelism, sensor.getIntermediateFileSize());
+    boolean newTask = acceptNewTasks && (freeSpace >= minspacestart);
 
     // Check for new tasks to be executed on the tasktracker
     if (recoveryManager.shouldSchedule() && newTask && !isBlacklisted) {
@@ -3026,6 +3028,7 @@ public class JobTracker implements MRConstants, InterTrackerProtocol,
         List<Task> tasks = getSetupAndCleanupTasks(taskTrackerStatus);
         if (tasks == null ) {
           tasks = taskScheduler.assignTasks(taskTrackers.get(trackerName));
+          System.out.println("Tracker name : " + trackerName + " assigned, free space : " + freeSpace + ", minspacestart : " + minspacestart);
         }
         if (tasks != null) {
           for (Task task : tasks) {
