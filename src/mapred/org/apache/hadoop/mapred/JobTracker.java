@@ -3064,7 +3064,17 @@ public class JobTracker implements MRConstants, InterTrackerProtocol,
         
     return response;
   }
-  
+
+  public synchronized int getCurrentMaxException() throws IOException {
+    Sensor sensor = Sensor.getInstance();
+    return sensor.getMaxExceptions();
+  }
+
+  public synchronized long getIntermediateFileSize() throws IOException {
+    Sensor sensor = Sensor.getInstance();
+    return sensor.getIntermediateFileSize();
+  }
+
   /**
    * Calculates next heartbeat interval using cluster size.
    * Heartbeat interval is incremented by 1 second for every 100 nodes by default. 

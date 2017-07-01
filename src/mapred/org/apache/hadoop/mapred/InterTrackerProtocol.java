@@ -108,7 +108,19 @@ interface InterTrackerProtocol extends VersionedProtocol {
                               boolean acceptNewTasks,
                               short responseId)
     throws IOException;
-  
+
+  // added new RPC function to transfer information for controller
+
+  /**
+   * Get the current max exception
+   */
+  public int getCurrentMaxException() throws IOException;
+
+  /**
+   * Get the intermediate file size
+   */
+  public long getIntermediateFileSize() throws IOException;
+
   /**
    * The task tracker calls this once, to discern where it can find
    * files referred to by the JobTracker
