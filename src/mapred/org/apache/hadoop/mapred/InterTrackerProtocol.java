@@ -106,6 +106,8 @@ interface InterTrackerProtocol extends VersionedProtocol {
                               boolean restarted, 
                               boolean initialContact,
                               boolean acceptNewTasks,
+                              long freeSpace,
+                              int mapParallelism,
                               short responseId)
     throws IOException;
 

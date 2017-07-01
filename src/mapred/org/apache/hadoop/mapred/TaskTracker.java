@@ -1991,18 +1991,16 @@ public class TaskTracker implements MRConstants, TaskUmbilicalProtocol,
     long localMinSpaceStart;
     synchronized (this) {
 //      long intermediateFileSize = jobClient.getIntermediateFileSize();
-      long intermediateFileSize = 178257920;
-      int currentMaxException = jobClient.getCurrentMaxException();
-      localMinSpaceStart = controller.calculateMinspacestart(currentMaxException, mapParallelism, intermediateFileSize);
-      askForNewTask = enoughFreeSpace(localMinSpaceStart);
-      askForNewTask = askForNewTask &&
+//      long intermediateFileSize = 178257920;
+//      int currentMaxException = jobClient.getCurrentMaxException();
+
+      askForNewTask =
         ((status.countOccupiedMapSlots() < maxMapSlots || 
           status.countOccupiedReduceSlots() < maxReduceSlots) && 
          acceptNewTasks);
     }
     if (askForNewTask) {
-
-      LOG.info("Ask for new task : " + askForNewTask);
+//      askForNewTask = enoughFreeSpace(localMinSpaceStart);
       long freeDiskSpace = getFreeSpace();
       long totVmem = getTotalVirtualMemoryOnTT();
       long totPmem = getTotalPhysicalMemoryOnTT();
@@ -2045,7 +2043,9 @@ public class TaskTracker implements MRConstants, TaskUmbilicalProtocol,
     HeartbeatResponse heartbeatResponse = jobClient.heartbeat(status, 
                                                               justStarted,
                                                               justInited,
-                                                              askForNewTask, 
+                                                              askForNewTask,
+                                                              getFreeSpace(),
+                                                              mapParallelism,
                                                               heartbeatResponseId);
       
     //

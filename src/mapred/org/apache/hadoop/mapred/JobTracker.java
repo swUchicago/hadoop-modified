@@ -51,6 +51,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+import mapred.org.apache.hadoop.mapred.controller.Controller;
 import mapred.org.apache.hadoop.mapred.controller.Sensor;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -2918,7 +2919,9 @@ public class JobTracker implements MRConstants, InterTrackerProtocol,
   public synchronized HeartbeatResponse heartbeat(TaskTrackerStatus status, 
                                                   boolean restarted,
                                                   boolean initialContact,
-                                                  boolean acceptNewTasks, 
+                                                  boolean acceptNewTasks,
+                                                  long freeSpace,
+                                                  int mapParallelism,
                                                   short responseId) 
     throws IOException {
     if (LOG.isDebugEnabled()) {
@@ -3005,8 +3008,13 @@ public class JobTracker implements MRConstants, InterTrackerProtocol,
 
     List<TaskTrackerAction> actions = new ArrayList<TaskTrackerAction>();
     boolean isBlacklisted = faultyTrackers.isBlacklisted(status.getHost());
+
+    Controller controller = Controller.getInstance();
+
+    boolean newTask = acceptNewTasks && (freeSpace >= controller.calculateMinspacestart(sensor.getMaxExceptions(), mapParallelism, sensor.getIntermediateFileSize()));
+
     // Check for new tasks to be executed on the tasktracker
-    if (recoveryManager.shouldSchedule() && acceptNewTasks && !isBlacklisted) {
+    if (recoveryManager.shouldSchedule() && newTask && !isBlacklisted) {
       TaskTrackerStatus taskTrackerStatus = getTaskTrackerStatus(trackerName);
       if (taskTrackerStatus == null) {
         LOG.warn("Unknown task tracker polling; ignoring: " + trackerName);
