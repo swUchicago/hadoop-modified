@@ -1984,13 +1984,6 @@ public class TaskTracker implements MRConstants, TaskUmbilicalProtocol,
     Controller controller = Controller.getInstance();
     int mapParallelism = maxMapSlots;
 
-    // Update the value of intermediate file size and current max exception
-    long intermediateFileSize = jobClient.getIntermediateFileSize();
-    int currentMaxException = jobClient.getCurrentMaxException();
-
-    System.out.println("Intermediate file : " + intermediateFileSize);
-    System.out.println("Current Max Exception : " + currentMaxException);
-
     //
     // Check if we should ask for a new Task
     //
@@ -2001,12 +1994,13 @@ public class TaskTracker implements MRConstants, TaskUmbilicalProtocol,
         ((status.countOccupiedMapSlots() < maxMapSlots || 
           status.countOccupiedReduceSlots() < maxReduceSlots) && 
          acceptNewTasks);
-      minSpaceStart = controller.calculateMinspacestart(currentMaxException, mapParallelism, intermediateFileSize);
-      LOG.info("CurrentMaxEx: " + currentMaxException + ", Minspacestart : " + minSpaceStart  + ", Intermediate : " + intermediateFileSize);
-      localMinSpaceStart = minSpaceStart;
     }
     if (askForNewTask) {
+      long intermediateFileSize = jobClient.getIntermediateFileSize();
+      int currentMaxException = jobClient.getCurrentMaxException();
+      localMinSpaceStart = controller.calculateMinspacestart(currentMaxException, mapParallelism, intermediateFileSize);
       askForNewTask = enoughFreeSpace(localMinSpaceStart);
+      LOG.info("Ask for new task : " + askForNewTask);
       long freeDiskSpace = getFreeSpace();
       long totVmem = getTotalVirtualMemoryOnTT();
       long totPmem = getTotalPhysicalMemoryOnTT();
