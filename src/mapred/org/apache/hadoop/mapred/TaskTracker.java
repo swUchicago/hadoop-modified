@@ -1985,8 +1985,11 @@ public class TaskTracker implements MRConstants, TaskUmbilicalProtocol,
     int mapParallelism = maxMapSlots;
 
     // Update the value of intermediate file size and current max exception
-    intermediateFileSize = jobClient.getIntermediateFileSize();
-    currentMaxException = jobClient.getCurrentMaxException();
+    long intermediateFileSize = jobClient.getIntermediateFileSize();
+    int currentMaxException = jobClient.getCurrentMaxException();
+
+    System.out.println("Intermediate file : " + intermediateFileSize);
+    System.out.println("Current Max Exception : " + currentMaxException);
 
     //
     // Check if we should ask for a new Task
