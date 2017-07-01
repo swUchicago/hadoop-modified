@@ -1990,7 +1990,8 @@ public class TaskTracker implements MRConstants, TaskUmbilicalProtocol,
     boolean askForNewTask;
     long localMinSpaceStart;
     synchronized (this) {
-      long intermediateFileSize = jobClient.getIntermediateFileSize();
+//      long intermediateFileSize = jobClient.getIntermediateFileSize();
+      long intermediateFileSize = 178257920;
       int currentMaxException = jobClient.getCurrentMaxException();
       localMinSpaceStart = controller.calculateMinspacestart(currentMaxException, mapParallelism, intermediateFileSize);
       askForNewTask = enoughFreeSpace(localMinSpaceStart);
@@ -2000,6 +2001,8 @@ public class TaskTracker implements MRConstants, TaskUmbilicalProtocol,
          acceptNewTasks);
     }
     if (askForNewTask) {
+
+      LOG.info("Ask for new task : " + askForNewTask);
       long freeDiskSpace = getFreeSpace();
       long totVmem = getTotalVirtualMemoryOnTT();
       long totPmem = getTotalPhysicalMemoryOnTT();
