@@ -3010,7 +3010,11 @@ public class JobTracker implements MRConstants, InterTrackerProtocol,
     boolean isBlacklisted = faultyTrackers.isBlacklisted(status.getHost());
 
     Controller controller = Controller.getInstance();
-
+    try {
+      Thread.sleep(1000);
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    }
     boolean newTask = acceptNewTasks && (freeSpace >= controller.calculateMinspacestart(sensor.getMaxExceptions(), mapParallelism, sensor.getIntermediateFileSize()));
 
     // Check for new tasks to be executed on the tasktracker
