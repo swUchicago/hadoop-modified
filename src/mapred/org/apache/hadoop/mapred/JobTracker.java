@@ -3036,7 +3036,7 @@ public class JobTracker implements MRConstants, InterTrackerProtocol,
               LOG.debug(trackerName + " -> LaunchTask: " + task.getTaskID());
             }
             actions.add(new LaunchTaskAction(task));
-            System.out.println("Tracker name : " + trackerName + " assigned, free space : " + freeSpace + ", minspacestart : " + minspacestart);
+            System.out.println("Tracker name : " + trackerName + " assigned with " +  task.getTaskID() + ", free space : " + freeSpace + ", minspacestart : " + minspacestart);
           }
         }
       }
